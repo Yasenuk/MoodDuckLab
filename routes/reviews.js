@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../db');
+const pool = require('../db-connect');
 
 const reviewLimiter = require('../middleware/limit');
 
@@ -25,7 +25,9 @@ router.post('/send-review', reviewLimiter, async (req, res) => {
     );
     res.status(200).json({ success: true, message: 'Відгук збережено!' });
   } catch (err) {
-    console.error('💥 Помилка бази:', err.message);
+    console.log(pool);
+    
+    console.error('Помилка бази:', err.message);
     res.status(500).json({ success: false, error: 'Помилка сервера...' });
 	}
 	
@@ -49,7 +51,6 @@ router.get('/reviews', async (req, res) => {
     );
     res.json(result.rows);
     console.log(result.rows);
-    
   } catch (err) {
     console.error('Помилка при отриманні відгуків:', err.message);
     res.status(500).json({ error: 'Не вдалося отримати відгуки...' });
