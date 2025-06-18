@@ -18,7 +18,7 @@ app.use(helmet({
   contentSecurityPolicy: {
     useDefaults: true,
     directives: {
-      "script-src": ["'self'", "https://unpkg.com"],
+      "script-src": ["'self'"],
     },
   },
 }));

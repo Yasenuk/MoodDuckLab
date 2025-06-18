@@ -523,8 +523,8 @@ body._locked {
 .swiper-pagination {
   display: flex;
   align-items: center;
-  -moz-column-gap: 0.1875rem;
-       column-gap: 0.1875rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
   z-index: 30;
 }
 @media (max-width: 47.99875em) {
@@ -547,20 +547,20 @@ body._locked {
   }
 }
 @media (min-width: 20em) and (max-width: 83.5em) {
-  @supports (width: clamp( 0.5625rem , 0.5034448819rem  +  0.2952755906vw , 0.75rem )) {
+  @supports (width: clamp( 0.75rem , 0.9965551181rem  +  -0.2952755906vw , 0.9375rem )) {
     .swiper-pagination-bullet {
-      width: clamp( 0.5625rem , 0.5034448819rem  +  0.2952755906vw , 0.75rem );
+      width: clamp( 0.75rem , 0.9965551181rem  +  -0.2952755906vw , 0.9375rem );
     }
   }
-  @supports not (width: clamp( 0.5625rem , 0.5034448819rem  +  0.2952755906vw , 0.75rem )) {
+  @supports not (width: clamp( 0.75rem , 0.9965551181rem  +  -0.2952755906vw , 0.9375rem )) {
     .swiper-pagination-bullet {
-      width: calc(0.5625rem + 0.1875 * (100vw - 20rem) / 63.5);
+      width: calc(0.9375rem + -0.1875 * (100vw - 20rem) / 63.5);
     }
   }
 }
 @media (max-width: 20em) {
   .swiper-pagination-bullet {
-    width: 0.5625rem;
+    width: 0.9375rem;
   }
 }
 @media (min-width: 83.5em) {
