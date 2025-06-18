@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="MoodDuck Lab" />
+
+	<meta name="description"
+		content="MOOD DUCK – це набори для електронних сигарет нового рівня. Створені на основі преміальних ароматизаторів та виготовлені на потужностях лідера індустрії - FLAVORLAB.">
+	
+	<meta name="keywords" content="Мудак, Муддак, Муд Дак, MoodDuck, Mood Duck, Mud Duck, Mud Dack, Lab, Лаб, liquid, ліквід, POD-системи, вейп, оригінальний бренд, vape, Ukraine, Україна, рідини, набори для самозамісу, самозаміси, жижа, жижки, електронні сигарети, електронки, вейп, заправки, для вейпів, пода, набори, пахучки, ароматизатори, стрічка, пакет, лента для пода, сольові рідини, salt, поди">
+	
+	<meta name="theme-color" content="#000000">
+
+	<link rel="dns-prefetch" href="https://yasenuk.github.io">
+	<link rel="preconnect" href="https://yasenuk.github.io">
+
+	<link rel="manifest" href="./manifest.json" />
+
+	<link rel="preload" href="./src/images/alternative/graffiti.webp" as="image" imagesrcset="./src/images/alternative/graffiti-768.webp 768w, ./src/images/alternative/graffiti.webp 1440w" imagesizes="100vw">
+	<link rel="preload" href="./src/images/alternative/noise.webp" as="image" imagesrcset="./src/images/alternative/noise-768.webp 768w, ./src/images/alternative/noise.webp 1440w" imagesizes="100vw">
+	
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		*::before,
+		*::after {
+			display: inline-block;
+		}
+
+		:focus,
+		:active {
+			outline: none;
+		}
+
+		a:focus,
+		a:active {
+			outline: none;
+		}
+
+		html,
+		body {
+			height: 100%;
+			min-width: 20rem;
+		}
+
+		body {
+			color: var(--text-color-light);
+			line-height: 1;
+			font-family: "Gilroy";
+			font-size: 1.125rem;
+			text-rendering: optimizeLegibility;
+			-ms-text-size-adjust: 100%;
+			-moz-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		input,
+		button,
+		textarea {
+			font-family: "Gilroy";
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+			background-color: transparent;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+		}
+
+		label {
+			display: inline-block;
+		}
+
+		button,
+		select,
+		option {
+			cursor: pointer;
+		}
+
+		a {
+			display: inline-block;
+			color: inherit;
+			text-decoration: none;
+		}
+
+		ul, li {
+			list-style: none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: inherit;
+			font-size: inherit;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
+	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
+
+	<link rel="preload" href="./src/images/banners/banner.webp" as="image" imagesrcset="./src/images/banners/banner-750.webp 768w, ./src/images/banners/banner.webp 1335w" imagesizes="100vw">
+	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
+
+	<title>MoodDuck Lab - Преміальні ароматизатори для само­замісу</title>
+</head>
+
+<body>
+	<section class="wrapper">
+
+		<header class="header">
+			<section class="header__container" data-watch data-watch-margin="0px">
+				<nav class="header__menu menu" data-burger>
+					<button class="menu__close-button" aria-label="Відкрити меню-бургер"><span></span></button>
+					<section class="menu__body">
+						<section class="menu__links">
+							<ul class="menu__list menu__list_links">
+								<li class="menu__item menu__item_links">
+									<a href="./index.html" aria-label="Перейти на головну" aria-current="page"
+										class="menu__link">Головна</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="#gallery-flavours" aria-label="Перейти до галереї смаків" aria-current="page"
+										class="menu__link">Галерея смаків</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="#gallery-merch" aria-label="Перейти до галереї мерчу" aria-current="page"
+										class="menu__link">Галерея мерчу</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="#about" aria-label="Перейти до блоку 'Про Нас'" aria-current="page" class="menu__link">Про
+										нас</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="#resources-library" aria-label="Перейти до бібліотеки матеріалів" aria-current="page"
+										class="menu__link">Бібліотека матеріалів</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="#reviews" aria-label="Переглянути відгуки" aria-current="page" class="menu__link">Відгуки</a>
+								</li>
+								<li class="menu__item menu__item_links">
+									<a href="#contacts" aria-label="Перейти до контактів" aria-current="page"
+										class="menu__link">Контакти</a>
+								</li>
+							</ul>
+						</section>
+						<section class="menu__section" data-vis>
+							<h3 class="menu__title">Для прямого зв’язку:</h3>
+							<ul class="menu__contacts menu__list">
+								<li class="menu__item">
+									<a target="_blank" aria-label="Перейти до електронної адреси Mood Duck"
+										href="mailto:moodduckofficial@gmail.com" class="menu__link">
+										<i aria-hidden="true" class="icon-mail menu__item_ico"></i><span>moodduckofficial@gmail.com</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a target="_blank" aria-label="Перейти до чату Mood Duck" href="https://t.me/MoodDuck_manager"
+										class="menu__link">
+										<i aria-hidden="true" class="icon-Instagram menu__item_ico"></i><span>Перейти до чату</span>
+									</a>
+								</li>
+							</ul>
+						</section>
+						<section class="menu__section">
+							<h3 class="menu__title" data-vis>Соціальні мережі:</h3>
+							<ul class="menu__social menu__list">
+								<li class="menu__item menu__item_social">
+									<a target="_blank" aria-label="Перейти до Telegram-каналу" href="https://t.me/moodducklab"
+										class="menu__link">
+										<i aria-hidden="true" class="icon-telegram menu__item_ico"></i><span data-vis>Telegram-канал</span>
+									</a>
+								</li>
+								<li class="menu__item menu__item_social">
+									<a target="_blank" aria-label="Перейти до Instagram"
+										href="https://www.instagram.com/moodduck_liquid?igsh=MTZ0aW5ldjVqcnNnZw==" class="menu__link">
+										<i aria-hidden="true" class="icon-Instagram menu__item_ico"></i><span data-vis>Instagram</span>
+									</a>
+								</li>
+								<li class="menu__item menu__item_social">
+									<a target="_blank" aria-label="Перейти до TikTok" href="https://vm.tiktok.com/ZMSJ863H1/"
+										class="menu__link">
+										<i aria-hidden="true" class="icon-tiktok menu__item_ico"></i><span data-vis>TikTok</span>
+									</a>
+								</li>
+							</ul>
+						</section>
+					</section>
+				</nav>
+				<a href="./index.html" class="header__logo"><img width="117" height="88" loading="eager" fetchpriority="high"
+						src="./src/images/logo.svg" alt="Логотип MoodDuck"></a>
+			</section>
+		</header>
+
+		<main class="main">
+			<section class="main__bg">
+				<section class="main__bg-group main__bg-group_noises"></section>
+				<section class="main__bg-group main__bg-group_lights">
+					<picture data-light="hero" data-light-y-offset="0"
+						class="main__bg-picture main__bg-picture-light main__hero_light">
+						<source srcset="./src/images/alternative/lights/light-hero.webp" type="image/webp" />
+						<img width="719" height="644" src="./src/images/alternative/lights/light-hero.png"
+							alt="Світло на фоні" />
+					</picture>
+					<picture data-light="gallery-flavours" data-light-y-offset="0.6"
+						class="main__bg-picture main__bg-picture-light main__gallery_light">
+						<source srcset="./src/images/alternative/lights/light-gallery.webp" type="image/webp" />
+						<img width="445" height="2073" src="./src/images/alternative/lights/light-gallery.png"
+							alt="Світло на фоні" />
+					</picture>
+					<picture data-light="about" data-light-y-offset="0.5"
+						class="main__bg-picture main__bg-picture-light main__about_light">
+						<source srcset="./src/images/alternative/lights/light-about.webp" type="image/webp" />
+						<img width="362" height="1757" loading="lazy" src="./src/images/alternative/lights/light-about.png"
+							alt="Світло на фоні" />
+					</picture>
+					<picture data-light="flavours-info" data-light-y-offset="0.5"
+						class="main__bg-picture main__bg-picture-light main__flavours-info_light">
+						<source srcset="./src/images/alternative/lights/light-flavours-info.webp" type="image/webp" />
+						<img width="347" height="1757" loading="lazy" src="./src/images/alternative/lights/light-flavours-info.png"
+							alt="Світло на фоні" />
+					</picture>
+					<picture data-light="resources-library|cube" data-light-y-offset="0.5"
+						class="main__bg-picture main__bg-picture-light main__resources-library_light">
+						<source srcset="./src/images/alternative/lights/light-resource-library.webp" type="image/webp" />
+						<img width="734" height="756" loading="lazy"
+							src="./src/images/alternative/lights/light-resource-library.png" alt="Світло на фоні" />
+					</picture>
+					<picture data-light="reviews" data-light-y-offset="1"
+						class="main__bg-picture main__bg-picture-light main__contacts_light">
+						<source srcset="./src/images/alternative/lights/light-contacts.webp" type="image/webp" />
+						<img width="283" height="1208" loading="lazy" src="./src/images/alternative/lights/light-contacts.png"
+							alt="Світло на фоні" />
+					</picture>
+				</section>
+				<section class="main__bg-group main__bg-group_graffities"></section>
+			</section>
+
+			<section class="main__hero hero" id="hero">
+				<section class="hero__container">
+					<section class="hero__slider swiper swiper-banner">
+						<section class="hero__wrapper swiper-wrapper">
+							<section class="hero__slide swiper-slide">
+								<picture>
+									<source 
+											srcset="./src/images/banners/banner-750.webp 768w, 
+															./src/images/banners/banner.webp 1335w" 
+											type="image/webp" 
+											sizes="100vw"
+									/>
+									<img
+											width="1335"
+											height="500"
+											src="./src/images/banners/banner.png"
+											alt="Банер"
+											loading="eager"
+											fetchpriority="high"
+											decoding="async"
+											class="hero__banner banner banner_center"
+									/>
+								</picture>
+							</section>
+						</section>
+						<section class="hero__conrtol swiper-conrtol">
+							<section class="hero__slider-buttons swiper-buttons">
+								<button type="button" class="hero__slider-button hero__slider-button_prev swiper-button-prev" aria-label="До попереднього слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
+								</button>
+								<button type="button" class="hero__slider-button hero__slider-button_next swiper-button-next" aria-label="До наступного слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
+								</button>
+							</section>
+							<section class="hero__pagination swiper-pagination"></section>
+						</section>
+					</section>
+				</section>
+			</section>
+
+			<section class="main__gallery-flavous gallery-flavours" id="gallery-flavours">
+				<section class="gallery-flavours__container">
+					<section class="heading" data-watch>
+						<h2 class="heading__title">
+							Галерея <span class="heading__title_light">смаків</span>
+						</h2>
+						<p class="heading__subtitle gallery-flavours__subtitle">
+							<span class="heading__subtitle_accent">21</span>
+							<span class="heading__subtitle_text">
+								Вибуховий смак — від класики до екзотики.
+								Максимум якості — мінімум компромісів!
+							</span>
+						</p>
+					</section>
+					<section class="gallery-flavours__slider swiper swiper-card">
+						<section class="gallery-flavours__wrapper swiper-wrapper">
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_AppleMint.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_AppleMint.png" alt="Ароматизатор MoodDuck 12мл Apple Mint"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Соковите, стигле яблуко з першого вдиху занурює
+											у знайомий смак, у якому немає жодного натяку на
+											зайву кислоту. Трохи солодкий смак гармонійно
+											поєднується зі свіжою м’ятою, яка додає легкого холодку,
+											не перебиваючи смак яблука. Цей смак ідеально
+											підійде тим, хто шукає класичне поєднання, смачне та
+											збалансоване.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Apple Mint</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_BilberryIce.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_BilberryIce.png"
+												alt="Ароматизатор MoodDuck 12мл Bilberry Ice" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											М’яка, солодка чорниця з легкою прохолодою та кислинкою
+											створює ніжний, приємний смак, який розкривається
+											поступово. Ягідні нотки відчуваються на вдосі й у
+											післясмаку, залишаючи за собою легкий аромат лісових
+											ягід. Ідеальний варіант для тих, хто шукає делікатну
+											ягідну композицію з освіжаючим ефектом.
+										</p>
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Bilberry Ice</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_BlueberryMenthol.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_BlueberryMenthol.png"
+												alt="Ароматизатор MoodDuck 12мл Blueberry Menthol" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Стигла чорниця вдало поєднується з ментоловою свіжістю,
+											створюючи збалансований, об’ємний смак. Ягідна
+											солодкість гарно розкривається і зберігається до
+											останнього видиху, а ментол додає відчуття легкості та
+											чистоти. Цей смак подарує приємну прохолоду і яскравий
+											ягідний настрій.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Blueberry Menthol</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_CherryCola.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_CherryCola.png"
+												alt="Ароматизатор MoodDuck 12мл Cherry Cola" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Поєднання соковитої вишні та улюбленого смаку Коли, що
+											нагадує знайомий напій із приємною солодкістю. Вишня
+											доповнює Колу, а легкий холодок робить мікс ще більш
+											освіжаючим. Цей смак чудово підійде для щоденного
+											використання — яскравий, впізнаваний і дуже приємний.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Cherry Cola</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_CherryMentol.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_CherryMentol.png"
+												alt="Ароматизатор MoodDuck 12мл Cherry Mentol" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Свіжий ментол плавно огортає смак соковитої вишні, яка
+											розкривається трохи пізніше. Легкий вишневий післясмак
+											залишає приємне враження, а загальна композиція смакує
+											м’яко і делікатно. Гарне рішення для любителів прохолоди
+											з фруктовими нотками.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Cherry Mentol</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_ChillPeach.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_ChillPeach.png"
+												alt="Ароматизатор MoodDuck 12мл Chill Peach" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Запашний, стиглий персик наповнює аромат з перших
+											секунд, даруючи ніжний, фруктовий настрій. Холодок
+											зовсім легкий — лише для балансу, аби підкреслити
+											соковитість основи. Цей смак наче тепле літо з ковтком
+											свіжості — м’який, ароматний, делікатний.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Chill Peach</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_CitrusParadise.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_CitrusParadise.png"
+												alt="Ароматизатор MoodDuck 12мл Citrus Paradise" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Яскравий мікс цитрусових з відчутною ноткою апельсинової
+											цедри. Смак відкривається одночасно солодким і з легкою
+											кислинкою, створюючи приємний тонізуючий ефект.
+											Композиція збалансована, легка, з помірним холодком —
+											справжній заряд свіжості.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Citrus Paradise</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_CoolMint.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_CoolMint.png" alt="Ароматизатор MoodDuck 12мл Cool Mint"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Абсолютна свіжість у кожному вдиху. Цей смак — ніби
+											вдихнути повітря у морозний зимовий ранок. Підійде для
+											тих, хто шукає максимально чистий і свіжий смак без
+											додаткових ноток. Якщо хочеш дізнатися, що таке
+											справжній холод — вона для тебе.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Cool Mint</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_CurrantMenthol.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_CurrantMenthol.png"
+												alt="Ароматизатор MoodDuck 12мл Currant Menthol" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Стигла чорна смородина з насиченим ягідним характером
+											гарно поєднується з прохолодним ментолом. Смак глибокий
+											з легкою кислинкою, а холод лише підкреслює ягідну
+											соковитість. Дуже приємний, літній і водночас освіжаючий
+											смак.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Currant Menthol</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_DragonfruitIce.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_DragonfruitIce.png"
+												alt="Ароматизатор MoodDuck 12мл Dragonfruit Ice" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											М’яка і ніжна пітахайя з тонким, трохи солодким смаком
+											та екзотичним характером. Холод не домінує, а навпаки —
+											відкриває фруктові відтінки ще ширше. Ідеальний варіант
+											для тих, хто шукає щось нове та приємно збалансоване.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Dragonfruit Ice</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_ForestBerries.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_ForestBerries.png"
+												alt="Ароматизатор MoodDuck 12мл Forest Berries" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Багатогранний ягідний мікс, у якому зустрічаються стигла
+											полуниця, суниця та лісові ягоди. Смак яскравий,
+											соковитий, з приємним балансом кисло-солодких відтінків.
+											Післясмак залишає враження справжнього ягідного коктейлю
+											— свіжого, запашного й багатого.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Forest Berries</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_GranatoRosso.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_GranatoRosso.png"
+												alt="Ароматизатор MoodDuck 12мл Granato Rosso" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Незвичне, але дуже гармонійне поєднання граната, м’яти
+											та евкаліпта створює цікавий, свіжий аромат. Смак трохи
+											нагадує домашнє вино з трав’яними нотками — багатий,
+											оригінальний і запам’ятовується з першої спроби. Для
+											поціновувачів незвичних, але приємних міксів.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Granato Rosso</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_GrapeMint.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_GrapeMint.png" alt="Ароматизатор MoodDuck 12мл Grape Mint"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Запашний білий виноград у поєднанні з освіжаючою м’ятою
+											створює прохолодний, легкий смак. Виноград в міру
+											солодкий, а м’ята додає йому чистоти та свіжості.
+											Підійде для спокійного, м’якого паріння з ледь помітною
+											кислинкою.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Grape Mint</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_LemonMint.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_LemonMint.png" alt="Ароматизатор MoodDuck 12мл Lemon Mint"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Цитрус і м’ята — класика, яка не потребує зайвих слів.
+											Свіжий аромат кислого лимону з легкою гірчинкою цедри та
+											м’ятним післясмаком поєднується в приємний тонізуючий
+											мікс. Цей смак для тих, хто хоче щось освіжаюче та
+											збалансоване.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Lemon Mint</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_Mint_Gum.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_Mint_Gum.png" alt="Ароматизатор MoodDuck 12ml Mint Gum"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Цей смак знайомий з першого вдиху — свіжа, солодка м’ята
+											в стилі улюбленої жуйки. Вона м’яка та освіжаюча, з
+											приємним м'ятним акцентом та солодким післясмаком.
+											Настільки ніжного і смачного Орбіту ви ще точно не
+											куштували. Ідеальний варіант для любителів м’ятної
+											класики з ноткою ностальгії.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Mint Gum</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_PineappleFrost.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_PineappleFrost.png"
+												alt="Ароматизатор MoodDuck 12мл Pineapple Frost" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Яскравий ананас із легкою кислинкою та насиченим
+											ароматом. Холодок лише підкреслює фруктову основу,
+											залишаючи післясмак свіжим і соковитим. Ідеальний вибір
+											для спекотного дня, або втечі в думках на острів під
+											пальмами.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Pineapple Frost</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_RaspberryLemonade.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_RaspberryLemonade.png"
+												alt="Ароматизатор MoodDuck 12мл Raspberry Lemonade" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Солодка малина та освіжаючий лимонад створюють знайомий
+											літній мікс. Ідеальний баланс між солодким і кислим, з
+											дуже приємним ароматом в кожній затяжці. Ідеально
+											збалансований для щоденного вейпінгу.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Raspberry Lemonade</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_SourAppleIce.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_SourAppleIce.png"
+												alt="Ароматизатор MoodDuck 12мл Sour Apple Ice" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Яскравий, освіжаючий смак стиглого зеленого яблука з
+											приємною кислинкою. Відкривається відразу — соковите,
+											виразне, з легким холодком у післясмаку. Чистий,
+											лаконічний і дуже смачний варіант для щоденного паріння.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Sour Apple Ice</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_Strawberry_Energy.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_Strawberry_Energy.png"
+												alt="Ароматизатор MoodDuck 12мл Strawberry Energy" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Нестандартне поєднання, що з перших секунд піднімає
+											настрій. Смак балансує між ягідною соковитістю та
+											бадьорим, злегка кислуватим смаком енергетика. Ідеально
+											для тих, хто шукає щось нестандартне, з характером і
+											темпом.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Strawberry Energy</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/flavours/12ml_Tobacco.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_Tobacco.png" alt="Ароматизатор MoodDuck 12мл Tobacco"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Глибокий, насичений тютюновий смак із благородним
+											характером. Тут немає солодкавих надмірностей — лише
+											чистий тютюн із впізнаваним післясмаком. Ідеальний для
+											тих, хто любить вейп не за солодкі смаки, а за характер
+											та атмосферу.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Tobacco</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-flavours__slide swiper-slide">
+								<section class="gallery-flavours__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="
+																./src/images/cards/flavours/12ml_WatermelonIce.webp
+															" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/flavours/12ml_WatermelonIce.png"
+												alt="Ароматизатор MoodDuck 12мл Watermelon Ice" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Соковитий аромат стиглого кавуна із прохолодним
+											післясмаком створює легкий, літній вайб. Смак м’який, з
+											натяком на фруктову солодкість, а освіжаючий ефект додає
+											глибини. Добрий вибір для тих, хто хоче щось легке,
+											соковите і приємне. Must-have на літо.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">Watermelon Ice</h3>
+										<p class="product-card__strength">
+											Міцність: 50 mg / Strong
+										</p>
+										<p class="product-card__volume">Об'єм: 10 ml / 30 ml</p>
+									</section>
+								</section>
+							</section>
+						</section>
+						<section class="gallery-flavours__conrtol swiper-conrtol" data-watch>
+							<section class="gallery-flavours__slider-buttons swiper-buttons">
+								<button type="button"
+									class="gallery-flavours__slider-button gallery-flavours__slider-button_prev swiper-button-prev"
+									aria-label="До попереднього слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
+								</button>
+								<button type="button"
+									class="gallery-flavours__slider-button gallery-flavours__slider-button_next swiper-button-next"
+									aria-label="До наступного слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
+								</button>
+							</section>
+							<section class="gallery-flavours__pagination swiper-pagination"></section>
+						</section>
+					</section>
+				</section>
+			</section>
+
+			<section class="main__gallery-merch gallery-merch" id="gallery-merch">
+				<section class="gallery-merch__container">
+					<section class="heading" data-watch>
+						<h2 class="heading__title">
+							Галерея <span class="heading__title_light">мерчу</span>
+						</h2>
+						<p class="heading__subtitle gallery-merch__subtitle">
+							<span class="span-wrapper">Наш мерч — не просто дрібниці. Це характер, стиль і частина твого пода. </span>
+							<span class="span-wrapper"><span class="-upper">mood Duck</span> — це коли навіть мерч має настрій.</span>
+						</p>
+					</section>
+					<section class="gallery-merch__slider swiper swiper-card">
+						<section class="gallery-merch__wrapper swiper-wrapper">
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<img width="250" height="250" loading="lazy" fetchpriority="low"
+											src="./src/images/cards/merch/strap.svg" alt="Ремінець для POD-систем"
+											class="product-card__image" />
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Ремінець, що тримає не лише под, а й твій стиль. Зручний,
+											міцний, створений для тих, хто завжди в русі. Забудь про
+											пошуки свого пода — він завжди під рукою і завжди на
+											стилі. Яскравий акцент на твоєму образі, який одразу дає
+											зрозуміти, що ти в темі.
+										</p>
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Фірмовий ремінець для <span class="-nowrap"><span class="-upper">Pod</span>-систем</span>.
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/smellies/smelly_Blueberry_Mentol.webp"
+												type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/smellies/smelly_Blueberry_Mentol.png"
+												alt="Пахучка в авто Blueberry Menthol" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Твоя тачка, твій настрій. Тепер навіть повітря дихає
+											стилем. П’ять фірмових ароматів, створених спеціально для
+											тих, хто цінує атмосферу — не лише в затяжці, а і в
+											салоні. Легкі, приємні, ненав’язливі, але з характером —
+											як і ти. <span class="-upper">Mood Duck</span> заходить у гру не тільки в кишені, а й
+											у твоїй машині.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Крутий ароматизатор Blueberry Menthol в авто
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/smellies/smelly_Chill_Peach.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/smellies/smelly_Chill_Peach.webp" alt="Пахучка в авто Chill Peach"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Твоя тачка, твій настрій. Тепер навіть повітря дихає
+											стилем. П’ять фірмових ароматів, створених спеціально для
+											тих, хто цінує атмосферу — не лише в затяжці, а і в
+											салоні. Легкі, приємні, ненав’язливі, але з характером —
+											як і ти. <span class="-upper">Mood Duck</span> заходить у гру не тільки в кишені, а й
+											у твоїй машині.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Крутий ароматизатор Chill Peach в авто
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/smellies/smelly_Citrus_Paradise.webp"
+												type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/smellies/smelly_Citrus_Paradise.png"
+												alt="Пахучка в авто Citrus Paradise" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Твоя тачка, твій настрій. Тепер навіть повітря дихає
+											стилем. П’ять фірмових ароматів, створених спеціально для
+											тих, хто цінує атмосферу — не лише в затяжці, а і в
+											салоні. Легкі, приємні, ненав’язливі, але з характером —
+											як і ти. <span class="-upper">Mood Duck</span> заходить у гру не тільки в кишені, а й
+											у твоїй машині.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Крутий ароматизатор Citrus Paradise в авто
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/smellies/smelly_Sour_Apple_Ice.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/smellies/smelly_Sour_Apple_Ice.webp"
+												alt="Пахучка в авто Sour Apple Ice" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Твоя тачка, твій настрій. Тепер навіть повітря дихає
+											стилем. П’ять фірмових ароматів, створених спеціально для
+											тих, хто цінує атмосферу — не лише в затяжці, а і в
+											салоні. Легкі, приємні, ненав’язливі, але з характером —
+											як і ти. <span class="-upper">Mood Duck</span> заходить у гру не тільки в кишені, а й
+											у твоїй машині.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Крутий ароматизатор Sour Apple Ice в авто
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/smellies/smelly_Strawberry_Energy.webp"
+												type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/smellies/smelly_Strawberry_Energy.png"
+												alt="Пахучка в авто Strawberry Energy" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Твоя тачка, твій настрій. Тепер навіть повітря дихає
+											стилем. П’ять фірмових ароматів, створених спеціально для
+											тих, хто цінує атмосферу — не лише в затяжці, а і в
+											салоні. Легкі, приємні, ненав’язливі, але з характером —
+											як і ти. <span class="-upper">Mood Duck</span> заходить у гру не тільки в кишені, а й
+											у твоїй машині.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Крутий ароматизатор Strawberry Energy в авто
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/sticker_packs/sticker_pack_1.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/sticker_packs/sticker_pack_1.webp"
+												alt="Набір наліпок від фірми Mood Duck" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Топові стікерпаки. Кажи більше без слів. Вислови себе кожною наклейкою. Два набори авторських
+											стікерів — це мова твого
+											настрою. Прикрашай девайси, ноутбук, телефон, блокнот — усе, що хочеш. Створи свій стиль,
+											покажи свій вайб. Ідеальні для
+											подарунків і самовираження. Поклей стікер — заяви про себе.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Стікерпаки для тих, хто кайфує від деталей
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/sticker_packs/sticker_pack_2.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/sticker_packs/sticker_pack_1.png"
+												alt="Набір наліпок від фірми Mood Duck" class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Топові стікерпаки. Кажи більше без слів. Вислови себе кожною наклейкою. Два набори авторських
+											стікерів — це мова твого
+											настрою. Прикрашай девайси, ноутбук, телефон, блокнот — усе, що хочеш. Створи свій стиль,
+											покажи свій вайб. Ідеальні для
+											подарунків і самовираження. Поклей стікер — заяви про себе.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Стікерпаки для тих, хто кайфує від деталей
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/opener.webp" type="image/webp" />
+											<img width="250" height="250" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/opener.png" alt="Відкривачка наборів для самозамісу"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Міцна, компактна, стильна — ця відкривачка створена спеціально для
+											тебе. З нею кожен самозаміс
+											відкривається легко і з задоволенням. Просто тримай при собі — і забудь про ножі, ключі чи
+											нігті. Відкривачка <span class="-upper">Mood Duck</span>
+											— must-have для тих, хто парить і не париться.
+										</p>
+
+
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Відкривачка наборів для самозамісу
+										</h3>
+									</section>
+								</section>
+							</section>
+
+							<section class="gallery-merch__slide swiper-slide">
+								<section class="gallery-merch__card product-card">
+									<section class="product-card__picture">
+										<picture>
+											<source srcset="./src/images/cards/merch/package.webp" type="image/webp" />
+											<img width="100%" height="100%" loading="lazy" fetchpriority="low"
+												src="./src/images/cards/merch/package.png" alt="Фірмовий пакет Mood Duck"
+												class="product-card__image" />
+										</picture>
+
+										<div class="product-card__picture_buttons">
+											<button aria-label="Відкрити опис"
+												class="product-card__picture_button product-card__picture_button-info">
+												<i aria-hidden="true" class="icon-info"></i>
+											</button>
+
+											<button aria-label="Закрити опис"
+												class="product-card__picture_button product-card__picture_button-close">
+												<i aria-hidden="true" class="icon-cross"></i>
+											</button>
+										</div>
+
+										<p class="product-card__picture_info">
+											Ми створюємо фірмові пакети MOOD DUCK, які підкреслюють характер нашого бренду:
+											сміливий, сучасний, з іронією та впізнаваним стилем. Не рветься, не мнеться і точно не соромиться.
+											Брендований пакет MOOD DUCK — тримає форму, стиль і твою репутацію. Кидай усе в пакет і вперед —
+											нехай всі бачать, з ким
+											ти.
+										</p>
+									</section>
+
+									<section class="product-card__content">
+										<h3 class="product-card__name">
+											Брендовані пакети MOOD DUCK
+										</h3>
+									</section>
+								</section>
+							</section>
+						</section>
+						<section class="gallery-merch__conrtol swiper-conrtol">
+							<section class="gallery-merch__slider-buttons swiper-buttons">
+								<button type="button"
+									class="gallery-merch__slider-button gallery-merch__slider-button_prev swiper-button-prev"
+									aria-label="До попереднього слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
+								</button>
+								<button type="button"
+									class="gallery-merch__slider-button gallery-merch__slider-button_next swiper-button-next"
+									aria-label="До наступного слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
+								</button>
+							</section>
+							<section class="gallery-merch__pagination swiper-pagination"></section>
+						</section>
+					</section>
+				</section>
+			</section>
+
+			<section class="main__about about" id="about">
+				<section class="about__container">
+					<section class="heading" data-watch>
+						<h2 class="heading__title">
+							Про <span class="heading__title_light">нас</span>
+						</h2>
+						<p class="heading__subtitle about__subtitle">
+							<span class="span-wrapper"><span class="-upper">Mood Duck</span> — це не просто набори для <span
+									class="-nowrap"><span class="-upper">Pod</span>-систем</span>, а досвід, що перевершує всі
+								очікування.</span>
+							<span class="span-wrapper"><span class="-upper">Mood Duck</span>: твій настрій — твій смак.</span>
+						</p>
+					</section>
+					<section class="about__content-wrapper" data-watch>
+						<section class="about__conent">
+							<p class="about__paragraph">Дорогі партнери!</p>
+							<p class="about__paragraph">
+								Презентуємо вам новий бренд на ринку наборів для
+								<span class="-nowrap"><span class="-upper">Pod</span>-систем</span> -
+								<span class="-upper">Mood Duck</span>. Бренд,
+								який вже готовий завойовувати серця споживачів. Це результат
+								наполегливої праці, безлічі тестів та великого бажання
+								створити щось справді якісне та особливе.
+							</p>
+							<p class="about__paragraph">
+								<span class="-upper">Mood Duck</span> –
+								Набори для електронних сигарет нового рівня.
+							</p>
+							<p class="about__paragraph">
+								Створені на основі преміальних ароматизаторів та виготовлені
+								на потужностях лідера індустрії
+								<span class="-upper">FlavourLab</span>,
+								набори
+								<span class="-upper">Mood Duck</span>
+								пропонують вам 21 неперевершений смак, який ми вибрали,
+								орієнтуючись на побажання наших клієнтів та попиту на ринку.
+							</p>
+							<p class="about__paragraph">
+								Кожен смак ретельно тестувався нашими фахівцями, щоб
+								гарантувати вам ідеальний баланс якості та насолоди.
+							</p>
+							<p class="about__paragraph">
+								Підписуйся на нас в соцмережах - далі буде ще гарячіше.
+							</p>
+						</section>
+						<section class="about__banners">
+							<div class="about__decorative-duck decorative-duck">
+								<picture>
+									<source srcset="./src/images/alternative/ducks/mafia-duck.webp" type="image/webp" />
+									<img width="100" height="155" loading="lazy" fetchpriority="low"
+										src="./src/images/alternative/ducks/mafia-duck.png" alt="екоративна качка мафіозі" />
+								</picture>
+							</div>
+
+							<section class="about__slider swiper swiper-banner">
+								<section class="about__wrapper swiper-wrapper">
+									<section class="about__slide swiper-slide">
+										<picture>
+											<source srcset="./src/images/banners/banner-750.webp" type="image/webp" />
+											<img
+												width="750"
+												height="495"
+												src="./src/images/banners/banner-750.png"
+												alt="Банер"
+												loading="lazy"
+												class="about__banner banner banner_center"
+											/>
+										</picture>
+									</section>
+								</section>
+								<section class="about__conrtol swiper-conrtol">
+									<section class="about__slider-buttons swiper-buttons">
+										<button type="button" class="about__slider-button about__slider-button_prev swiper-button-prev"
+											aria-label="До попереднього слайду">
+											<i aria-hidden="true" class="icon-arrow"></i>
+										</button>
+										<button type="button" class="about__slider-button about__slider-button_next swiper-button-next"
+											aria-label="До наступного слайду">
+											<i aria-hidden="true" class="icon-arrow"></i>
+										</button>
+									</section>
+									<section class="about__pagination swiper-pagination"></section>
+								</section>
+							</section>
+						</section>
+					</section>
+				</section>
+			</section>
+
+			<section class="main__brand-info brand-info" id="brand-info">
+				<section class="brand-info__container">
+					<section class="heading heading_center" data-watch>
+						<h2 class="heading__title">
+							Чому обирають
+							<span class="heading__title_light"><span class="-nowrap">Mood Duck</span></span>
+						</h2>
+					</section>
+					<section class="brand-info__conent-wrapper" data-watch data-watch-margin="0px 0px -100px 0px">
+						<section class="brand-info__column">
+							<section class="brand-info__item" id="brand-info-item-1">
+								<section class="brand-info__item-title-wrap">
+									<h3 class="brand-info__item-title">
+										<span class="brand-info__item-title_accent">21</span>
+										неперевершений смак
+									</h3>
+								</section>
+								<section class="brand-info__item-description">
+									<p class="brand-info__paragraph">
+										Ми підібрали, орієнтуючись на побажання наших клієнтів та
+										попиту на ринку.
+									</p>
+								</section>
+							</section>
+							<section class="brand-info__item" id="brand-info-item-2">
+								<section class="brand-info__item-title-wrap">
+									<h3 class="brand-info__item-title">
+										Доступні в двох об'ємах
+									</h3>
+								</section>
+								<section class="brand-info__item-description">
+									<p class="brand-info__paragraph">
+										10мл та 30мл – для зручності кожного користувача.
+									</p>
+								</section>
+							</section>
+						</section>
+						<section class="brand-info__column">
+							<section class="brand-info__item" id="brand-info-item-3">
+								<section class="brand-info__item-title-wrap">
+									<h3 class="brand-info__item-title">
+										Зроблені на найкращих виробничих потужностях <span class="-upper">FlavourLab</span>
+									</h3>
+								</section>
+								<section class="brand-info__item-description">
+									<p class="brand-info__paragraph">
+										Всі смаки багато разів протестовані та відточені нашими
+										фахівцями.
+									</p>
+								</section>
+							</section>
+							<section class="brand-info__item" id="brand-info-item-4">
+								<section class="brand-info__item-title-wrap">
+									<h3 class="brand-info__item-title">
+										Фірмовий мерч та широкий асортимент промо-матеріалів
+									</h3>
+								</section>
+								<section class="brand-info__item-description">
+									<p class="brand-info__paragraph">
+										Всі новинки в наших соцмережах, далі - тільки більше.
+									</p>
+								</section>
+							</section>
+						</section>
+						<section class="brand-info__column">
+							<section class="brand-info__item" id="brand-info-item-5">
+								<section class="brand-info__item-title-wrap">
+									<h3 class="brand-info__item-title">
+										Тільки сертифіковані компоненти
+									</h3>
+								</section>
+								<section class="brand-info__item-description">
+									<p class="brand-info__paragraph">
+										Обираючи нашу продукцію в магазинах ви можете бути
+										впевнені в якості та безпеці кожного флакону.
+									</p>
+								</section>
+							</section>
+							<section class="brand-info__item" id="brand-info-item-6">
+								<section class="brand-info__item-title-wrap">
+									<h3 class="brand-info__item-title">
+										3 категорії <br />
+										смаків
+									</h3>
+								</section>
+								<section class="brand-info__item-description">
+									<p class="brand-info__paragraph">
+										9 м'ятно-ментольних смаків, які допоможуть охолодити
+										навіть самий гарячий характер.
+									</p>
+									<p class="brand-info__paragraph">
+										6 смаків з холодком, щоб кожна затяжка була прохолодною та
+										свіжою.
+									</p>
+									<p class="brand-info__paragraph">
+										ще 6 топових смаків, щоб потішити свої рецептори не тільки
+										свіжістю, а й приємним смаком.
+									</p>
+								</section>
+							</section>
+						</section>
+					</section>
+				</section>
+			</section>
+
+			<section class="main__flavours-info flavours-info" id="flavours-info">
+				<section class="flavours-info__container">
+					<section class="heading heading_center" data-watch>
+						<h2 class="heading__title">
+							<span class="heading__title_light heading__title_right">Доступні смаки</span>
+							<span class="-nowrap">Mood Duck</span>
+						</h2>
+					</section>
+					<section class="flavours-info__wrap" data-watch data-watch-margin="0px 0px -100px 0px">
+						<article class="flavours-info__card">
+							<section class="flavours-info__picture">
+								<figure>
+									<picture class="flavours-info__picture-set">
+										<source srcset="./src/images/cards/mint-flavour.webp" />
+										<img width="420" height="255" loading="lazy" fetchpriority="low" class="flavours-info__image"
+											src="./src/images/cards/mint-flavour.png" alt="М'ятні та ментольні смаки" />
+									</picture>
+									<figcaption class="flavours-info__picture-description">
+										М'ятні та ментольні смаки
+									</figcaption>
+								</figure>
+							</section>
+							<ul class="flavours-info__list">
+								<li class="flavours-info__item-list">
+									Apple Mint
+									<span class="flavours-info__item-list_flavour">(яблуко з м’ятою)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Blueberry Menthol
+									<span class="flavours-info__item-list_flavour">(чорниця з ментолом)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Cherry Menthol
+									<span class="flavours-info__item-list_flavour">(вишня з ментолом)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Cool Mint
+									<span class="flavours-info__item-list_flavour">(холодна м’ята)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Currant Menthol
+									<span class="flavours-info__item-list_flavour">(смородина з ментолом)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Grape Mint
+									<span class="flavours-info__item-list_flavour">(білий виноград з м’ятою)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Lemon Mint
+									<span class="flavours-info__item-list_flavour">(лимон з м’ятою)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Orbit Splash
+									<span class="flavours-info__item-list_flavour">(м’ятний орбіт)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Granato Rosso
+									<span class="flavours-info__item-list_flavour">(гранат, евкаліпт, м’ята)</span>
+								</li>
+							</ul>
+
+							<button aria-label="Відкрити попап з меню" class="flavours-info__more-button button open-popup"
+								data-popup-open="#popup-menu">
+								Дізнатися більше <i aria-hidden="true" class="icon-arrow _rotate"></i>
+							</button>
+						</article>
+						<article class="flavours-info__card">
+							<section class="flavours-info__picture">
+								<figure>
+									<picture class="flavours-info__picture-set">
+										<source srcset="./src/images/cards/ice-flavour.webp" />
+										<img width="420" height="255" loading="lazy" fetchpriority="low" class="flavours-info__image"
+											src="./src/images/cards/ice-flavour.png" alt="Смаки з холодком" />
+									</picture>
+									<figcaption class="flavours-info__picture-description">
+										Смаки з холодком
+									</figcaption>
+								</figure>
+							</section>
+							<ul class="flavours-info__list">
+								<li class="flavours-info__item-list">
+									Bilberry Ice
+									<span class="flavours-info__item-list_flavour">(чорниця з льодом)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Cherry Cola
+									<span class="flavours-info__item-list_flavour">(вишнева кола)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Chill Peach
+									<span class="flavours-info__item-list_flavour">(крижаний персик)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Citrus Paradise
+									<span class="flavours-info__item-list_flavour">(грейпфрут, лимон, апельсин)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Dragonfruit Ice
+									<span class="flavours-info__item-list_flavour">(пітахая з льодом)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Forest Berries
+									<span class="flavours-info__item-list_flavour">(лісові ягоди)</span>
+								</li>
+							</ul>
+
+							<button aria-label="Відкрити попап з меню" class="flavours-info__more-button button open-popup"
+								data-popup-open="#popup-menu">
+								Дізнатися більше <i aria-hidden="true" class="icon-arrow _rotate"></i>
+							</button>
+						</article>
+						<article class="flavours-info__card">
+							<section class="flavours-info__picture">
+								<figure>
+									<picture class="flavours-info__picture-set">
+										<source srcset="./src/images/cards/fruit-flavour.webp" type="image/webp" />
+										<img width="420" height="255" loading="lazy" fetchpriority="low" class="flavours-info__image"
+											src="./src/images/cards/fruit-flavour.png" alt="Топові фруктові та класичні смаки" />
+									</picture>
+									<figcaption class="flavours-info__picture-description">
+										Топові фруктові та класичні смаки
+									</figcaption>
+								</figure>
+							</section>
+
+							<ul class="flavours-info__list">
+								<li class="flavours-info__item-list">
+									Pineapple Frost
+									<span class="flavours-info__item-list_flavour">(крижаний ананас)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Raspberry Lemonade
+									<span class="flavours-info__item-list_flavour">(малиновий лимонад)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Sour Apple Ice
+									<span class="flavours-info__item-list_flavour">(кисле яблуко з льодом)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Strawberry RedBull
+									<span class="flavours-info__item-list_flavour">(полуничний енергетик)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Watermelon Ice
+									<span class="flavours-info__item-list_flavour">(кавун з льодом)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Tobacco
+									<span class="flavours-info__item-list_flavour">(класичний табак)</span>
+								</li>
+							</ul>
+
+							<button aria-label="Відкрити попап з меню" class="flavours-info__more-button button open-popup"
+								data-popup-open="#popup-menu">
+								Дізнатися більше <i aria-hidden="true" class="icon-arrow _rotate"></i>
+							</button>
+						</article>
+					</section>
+				</section>
+			</section>
+
+			<section class="main__price-policy price-policy" id="price-policy">
+				<section class="price-policy__container">
+					<section class="heading heading_center" data-watch>
+						<h2 class="heading__title">
+							<span class="heading__title_light heading__title_right">Цінова політика</span>
+							<span class="-nowrap">Mood Duck</span>
+						</h2>
+					</section>
+
+					<section class="price-policy__cards" data-watch>
+						<div class="price-policy__decorative-duck decorative-duck">
+							<picture>
+								<source srcset="./src/images/alternative/ducks//duck-write.webp" type="image/webp" />
+								<img width="98" height="116" loading="lazy" fetchpriority="low"
+									src="./src/images/alternative/ducks/duck-write.png" alt="Декоративна качка з блокнотом" />
+							</picture>
+						</div>
+
+						<section class="price-policy__card">
+							<h3 class="price-policy__card-title">10 мл</h3>
+							<p class="price-policy__card-price">МРЦ - 150</p>
+						</section>
+						<section class="price-policy__card price-policy__card_light">
+							<img width="117" height="126" fetchpriority="low" loading="lazy" src="./src/images/logo.svg"
+								alt="Логотип MoodDuck" />
+						</section>
+						<section class="price-policy__card">
+							<h3 class="price-policy__card-title">30 мл</h3>
+							<p class="price-policy__card-price">МРЦ - 350</p>
+						</section>
+					</section>
+				</section>
+			</section>
+
+			<section class="main__resources-library resources-library" id="resources-library">
+				<section class="resources-library__container">
+					<section class="heading heading_center" data-watch>
+						<h2 class="heading__title">
+							<span class="heading__title_light heading__title_right">Бібліотека</span> матеріалів
+						</h2>
+					</section>
+					<section class="resources-library__wrap">
+						<section class="resources-library__description" data-watch>
+							<p class="resources-library__paragraph">
+								Тут ви знайдете всю необхідну інформацію про наш продукт:
+							</p>
+							<p class="resources-library__paragraph">
+								Мокапи для сайтів, меню смаків, живі фото, стікерпаки,
+								шпалери, картинки в форматі PNG, мерч, промо ролик,
+								документацію, штрихкоди та інші матеріали.
+							</p>
+							<p class="resources-library__paragraph">
+								Загалом все, що може вам пригодитись для ознайомлення,
+								маркетингу, презентації і продажу наборів Mood Duck на ваших
+								площадках зібране в одному місці, завантажуй та користуйся.
+							</p>
+						</section>
+						<section class="resources-library__footer">
+							<a target="_blank" aria-label="Перейти до Google диску з матеріалами"
+								href="https://drive.google.com/drive/folders/1a73krjcY-SDCFqHxqOMaQnYhNxlkK3-6?usp=drive_link"
+								class="resources-library__button button">Завантажити матеріали <i aria-hidden="true"
+									class="icon-download"></i></a>
+							<p class="resources-library__button-description">
+								Презентуй продукцію зручно та професійно.
+							</p>
+						</section>
+						<section class="resources-library__cube" id="resources-library__cube" data-watch>
+							<section class="wrapper-3d">
+								<section class="wrapper-3d__cube cube" id="cube">
+									<section class="cube__side cube__side_bottom"></section>
+									<section class="cube__side cube__side_back">
+										<picture class="resources-library__picture-set">
+											<source srcset="./src/images/cube/front-side.webp" />
+											<img width="319" height="319" loading="lazy" fetchpriority="low" class="resources-library__image"
+												src="./src/images/cube/front-side.png" alt="Фронтальна сторона куба" />
+										</picture>
+									</section>
+									<section class="cube__side cube__side_front">
+										<picture class="resources-library__picture-set">
+											<source srcset="./src/images/cube/front-side.webp" />
+											<img width="319" height="319" loading="lazy" fetchpriority="low" class="resources-library__image"
+												src="./src/images/cube/front-side.png" alt="Фронтальна сторона куба" />
+										</picture>
+									</section>
+									<section class="cube__side cube__side_left">
+										<picture class="resources-library__picture-set">
+											<source srcset="./src/images/cube/left-side.webp" />
+											<img width="319" height="319" loading="lazy" fetchpriority="low" class="resources-library__image"
+												src="./src/images/cube/left-side.png" alt="Ліва сторона куба" />
+										</picture>
+									</section>
+									<section class="cube__side cube__side_right">
+										<picture class="resources-library__picture-set">
+											<source srcset="./src/images/cube/left-side.webp" />
+											<img width="319" height="319" loading="lazy" fetchpriority="low" class="resources-library__image"
+												src="./src/images/cube/left-side.png" alt="Ліва сторона куба" />
+										</picture>
+									</section>
+									<section class="cube__side cube__side_top">
+										<picture class="resources-library__picture-set">
+											<source srcset="./src/images/cube/top-side.webp" />
+											<img width="319" height="319" loading="lazy" fetchpriority="low" class="resources-library__image"
+												src="./src/images/cube/top-side.png" alt="Верхня сторона куба" />
+										</picture>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+				</section>
+			</section>
+
+			<section class="main__reviews reviews" id="reviews">
+				<section class="reviews__container">
+					<section class="reviews__heading heading heading_center" data-watch>
+						<h2 class="heading__title">
+							<span class="heading__title_light -nowrap heading__title_right">Що кажуть</span> про
+							<span class="-nowrap">Mood Duck</span>
+						</h2>
+						<div class="reviews__decorative-duck decorative-duck">
+							<picture>
+								<source srcset="./src/images/alternative/ducks/duck-watermelon-ice.webp" type="image/webp" />
+								<img width="126" height="140" loading="lazy" fetchpriority="low"
+									src="./src/images/alternative/ducks/duck-watermelon-ice.png" alt="Качка в кавуні" />
+							</picture>
+						</div>
+					</section>
+					<section class="reviews__slider swiper swiper-review">
+						<section class="reviews__wrapper swiper-wrapper"></section>
+						<section class="reviews__conrtol swiper-conrtol">
+							<section class="reviews__slider-buttons swiper-buttons">
+								<button type="button" class="reviews__slider-button reviews__slider-button_prev swiper-button-prev"
+									aria-label="До попереднього слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
+								</button>
+								<button type="button" class="reviews__slider-button reviews__slider-button_next swiper-button-next"
+									aria-label="До наступного слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
+								</button>
+							</section>
+							<section class="reviews__pagination swiper-pagination"></section>
+						</section>
+					</section>
+					<button aria-label="Відкрити попап з формою для написання вдгуку" class="reviews__button button open-popup"
+						data-popup-open="#popup-review">
+						Залишити відгук <i aria-hidden="true" class="icon-write"></i>
+					</button>
+				</section>
+			</section>
+
+			<section class="main__contacts contacts" id="contacts">
+				<section class="contacts__container">
+					<section class="heading heading_center" data-watch>
+						<h2 class="heading__title">
+							<span class="heading__title_light heading__title_right">Звʼяжіться</span>
+							<span class="-nowrap">з нами</span>
+						</h2>
+					</section>
+					<div class="contacts__conent" data-watch>
+						<section class="contacts__section contacts__section_left">
+							<h3 class="contacts__title">Для прямого зв’язку:</h3>
+							<ul class="contacts__list">
+								<li class="contacts__item">
+									<a target="_blank" aria-label="Перейти до електронної адреси Mood Duck"
+										href="mailto:moodduckofficial@gmail.com" class="contacts__link">
+										<i aria-hidden="true" class="icon-mail"></i><span>moodduckofficial@gmail.com</span>
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a target="_blank" aria-label="Перейти до чату Mood Duck" href="https://t.me/MoodDuck_manager"
+										class="contacts__link">
+										<i aria-hidden="true" class="icon-Instagram"></i><span>Перейти до чату</span>
+									</a>
+								</li>
+							</ul>
+						</section>
+						<section class="contacts__section contacts__picture-wrap">
+							<section class="contacts__picture">
+								<img width="117" height="88" loading="lazy"
+									src="./src/images/logo.svg" alt="Логотип MoodDuck">
+							</section>
+						</section>
+						<section class="contacts__section contacts__section_right">
+							<h3 class="contacts__title">Соціальні мережі:</h3>
+							<ul class="contacts__list">
+								<li class="contacts__item">
+									<a target="_blank" aria-label="Перейти до Telegram-каналу" href="https://t.me/moodducklab"
+										class="contacts__link">
+										<i aria-hidden="true" class="icon-telegram"></i><span>Telegram-канал</span>
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a target="_blank" aria-label="Перейти до Instagram"
+										href="https://www.instagram.com/moodduck_liquid?igsh=MTZ0aW5ldjVqcnNnZw==" class="contacts__link">
+										<i aria-hidden="true" class="icon-Instagram"></i><span>Instagram</span>
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a target="_blank" aria-label="Перейти до TikTok" href="https://vm.tiktok.com/ZMSJ863H1/"
+										class="contacts__link">
+										<i aria-hidden="true" class="icon-tiktok"></i><span>TikTok</span>
+									</a>
+								</li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<section class="footer__container">
+				<section class="footer__logo" data-watch>
+					<img width="1325" height="300" loading="lazy" fetchpriority="low" src="./src/images/footer-logo.svg"
+						alt="Логотип MoodDuck в підвалі сайту" class="footer__logo-image">
+				</section>
+
+				<section class="footer__conent-wrap">
+					<section class="footer__conent" data-watch>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="./index.html" aria-label="Перейти на головну" aria-current="page"
+									class="footer__link">Головна</a>
+							</li>
+							<li class="footer__item">
+								<a href="#gallery-flavours" aria-label="Перейти до галереї смаків" aria-current="page"
+									class="footer__link">Галерея смаків</a>
+							</li>
+							<li class="footer__item">
+								<a href="#gallery-merch" aria-label="Перейти до галереї мерчу" aria-current="page"
+									class="footer__link">Галерея мерчу</a>
+							</li>
+							<li class="footer__item">
+								<a href="#about" aria-label="Перейти до блоку 'Про Нас'" aria-current="page" class="footer__link">Про
+									нас</a>
+							</li>
+							<li class="footer__item">
+								<a href="#resources-library" aria-label="Перейти до бібліотеки матеріалів" aria-current="page"
+									class="footer__link">Бібліотека матеріалів</a>
+							</li>
+							<li class="footer__item">
+								<a href="#reviews" aria-label="Переглянути відгуки" aria-current="page" class="footer__link">Відгуки</a>
+							</li>
+							<li class="footer__item">
+								<a href="#contacts" aria-label="Перейти до контактів" aria-current="page"
+									class="footer__link">Контакти</a>
+							</li>
+						</ul>
+						<p class="footer__paragraph footer__policy">Політика кофіденційності</p>
+					</section>
+					<section class="footer__conent" data-watch data-watch-margin="0px 0px 40px 0px">
+						<p class="footer__paragraph footer__copy">&COPY; Всі права захищено</p>
+						<p class="footer__paragraph footer__brand">Mood Duck 2025</p>
+					</section>
+				</section>
+
+				<section class="footer__decarative" data-watch>
+					<picture>
+						<source srcset="./src/images/alternative/ducks/duck-in-cloud.webp" type="image/webp">
+						<img width="342" height="290" loading="lazy" fetchpriority="low"
+							src="./src/images/alternative/ducks/duck-in-cloud.png" alt="Качка на хмарі">
+					</picture>
+				</section>
+			</section>
+		</footer>
+
+		<section class="popup" id="popup-review" role="dialog" title="Попап, щоб залишити відгук"
+			aria-labelledby="Попап, щоб залишити відгук" aria-modal="true" data-popup>
+			<section class="popup__wrapper">
+				<section class="popup__body">
+					<header class="popup__header">
+						<h2 id="popup__title" class="popup__title">Залиште свій відгук про <span class="-nowrap">Mood Duck</span>
+						</h2>
+						<button data-popup-close aria-label="Закрити попап" type="button" class="popup__close"><i aria-hidden="true"
+								class="icon-cross"></i></button>
+					</header>
+					<section class="popup__content">
+						<form class="popup__form form-review" id="form-review" action="/send-review" method="POST">
+							<fieldset class="form-review__fieldset">
+								<legend class="form-review__label">Оцініть продукт</legend>
+								<section class="form-review__rating">
+									<input type="radio" id="rating-5" name="rating" value="5">
+									<label for="rating-5" title="5 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
+
+									<input type="radio" id="rating-4" name="rating" value="4">
+									<label for="rating-4" title="4 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
+
+									<input type="radio" id="rating-3" name="rating" value="3">
+									<label for="rating-3" title="3 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
+
+									<input type="radio" id="rating-2" name="rating" value="2">
+									<label for="rating-2" title="2 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
+
+									<input type="radio" id="rating-1" name="rating" value="1">
+									<label for="rating-1" title="1 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
+								</section>
+							</fieldset>
+
+							<section class="form-review__row">
+								<div class="form-review__column">
+									<label class="form-review__label" for="user-name">Прізвище та Ім’я</label>
+									<input type="text" name="name" id="user-name" class="form-review__input" pattern="[А-Яа-яA-Za-zЇїІіЄєҐґ'’\-\s]{2,50}$" autocomplete="off" required>
+								</div>
+								<div class="form-review__column">
+									<label class="form-review__label" for="user-phone">Номер телефону</label>
+									<input type="tel" id="user-phone" name="phone" class="form-review__input" autocomplete="off" required
+										pattern="\+380\d{9}$" title="+380XXXXXXXXX">
+								</div>
+							</section>
+
+							<label class="form-review__label" for="user-message">Коментар</label>
+							<textarea name="message" id="user-message" class="form-review__input form-review__textarea" pattern="[А-Яа-яA-Za-zЇїІіЄєҐґ'’\-\s]{5,500}$" required></textarea>
+
+							<section class="form-review__row">
+								<div class="form-review__column">
+									<label class="form-review__label" for="pluses">Плюси</label>
+									<input type="text" name="pluses" id="pluses" class="form-review__input">
+								</div>
+								<div class="form-review__column">
+									<label class="form-review__label" for="minuses">Мінуси</label>
+									<input type="text" name="minuses" id="minuses" class="form-review__input" placeholder="Поки не бачу">
+								</div>
+							</section>
+							<button type="submit" class="form-review__button button" id="send-review">Залишити відгук <i
+									class="icon-write"></i></button>
+						</form>
+					</section>
+				</section>
+			</section>
+		</section>
+
+		<section class="popup popup-menu" id="popup-menu" role="dialog" title="Попап для перегляду меню смаків"
+			aria-labelledby="Попап для перегляду меню смаків" aria-modal="true" data-popup>
+			<section class="popup__wrapper popup-menu__wrapper">
+				<section class="popup__body popup-menu__body">
+					<header class="popup__header popup-menu__header">
+						<button data-popup-close aria-label="Закрити попап" type="button" class="popup__close"><i aria-hidden="true"
+								class="icon-cross"></i></button>
+					</header>
+					<section class="popup__content popup-menu__content">
+						<section class="popup-menu__slider swiper swiper-menu">
+							<section class="popup-menu__slider-wrapper swiper-wrapper">
+
+								<section class="popup-menu__slide swiper-slide">
+									<picture>
+											<source 
+													srcset="./src/images/menu/flavours_menu_1-400.webp 400w,
+																	./src/images/menu/flavours_menu_1-800.webp 800w,
+																	./src/images/menu/flavours_menu_1.webp 995w"
+													type="image/webp"
+													sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 995px"
+											>
+											<source 
+													srcset="./src/images/menu/flavours_menu_1-400.png 400w,
+																	./src/images/menu/flavours_menu_1-800.png 800w,
+																	./src/images/menu/flavours_menu_1.png 995w"
+													type="image/png"
+													sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 995px"
+											>
+											<img
+													src="./src/images/menu/flavours_menu_1-400.png"
+													alt="Меню смаків"
+													loading="lazy"
+													decoding="async"
+													width="995"
+													height="1400"
+													style="width: 100%; height: auto;"
+											>
+									</picture>
+								</section>
+
+								<section class="popup-menu__slide swiper-slide">
+									<picture>
+										<source 
+												srcset="./src/images/menu/flavours_menu_2-400.webp 400w,
+																./src/images/menu/flavours_menu_2-800.webp 800w,
+																./src/images/menu/flavours_menu_2.webp 995w"
+												type="image/webp"
+												sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 995px"
+										>
+										<source 
+												srcset="./src/images/menu/flavours_menu_2-400.png 400w,
+																./src/images/menu/flavours_menu_2-800.png 800w,
+																./src/images/menu/flavours_menu_2.png 995w"
+												type="image/png"
+												sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 995px"
+										>
+										<img
+												src="./src/images/menu/flavours_menu_2-400.png"
+												alt="Меню смаків"
+												loading="lazy"
+												decoding="async"
+												width="995"
+												height="1400"
+												style="width: 100%; height: auto;"
+											>
+									</picture>
+								</section>
+
+							</section>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+
+	</section>
+
+	<script type="module" defer src="./src/scripts/libs/sliders.min.js"></script>
+	<script type="module" defer src="./src/scripts/index.min.js"></script>
+</body>
+
+</html>

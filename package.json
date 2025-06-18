@@ -1,0 +1,39 @@
+{
+  "name": "mood-duck-lab",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "moodduck",
+    "Mood Duck"
+  ],
+  "homepage": "https://github.com/Yasenuk/MoodDuckLab#readme",
+  "bugs": {
+    "url": "https://github.com/Yasenuk/MoodDuckLab/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yasenuk/MoodDuckLab.git"
+  },
+  "license": "MIT",
+  "author": "Mood Duck",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "compression": "^1.8.0",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "heroku-cli": "^7.0.9",
+    "pg": "^8.16.0",
+    "web-push": "^3.6.7"
+  }
+}
