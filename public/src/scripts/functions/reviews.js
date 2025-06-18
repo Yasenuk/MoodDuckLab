@@ -88,7 +88,6 @@ export class ReviewRenderer {
   }
 
   renderList(text) {
-    if(!text) return '';
     return text.split(',').map((item, i, arr) =>
       `<span>${item.trim()}</span>${i < arr.length - 1 ? ', ' : ''}`
     ).join('');

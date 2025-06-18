@@ -120,7 +120,7 @@ function observeAndInitSwiper({ selector, config }) {
         init();
         obs.disconnect();
       }
-    }, { rootMargin: '50px' });
+    });
     observer.observe(el);
   } else {
     init();

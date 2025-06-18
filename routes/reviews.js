@@ -5,7 +5,7 @@ const pool = require('../db-connect');
 const reviewLimiter = require('../middleware/limit');
 
 router.post('/send-review', reviewLimiter, async (req, res) => {
-  const { rating = 5, name, phone, message, pluses = '', minuses = 'Поки не бачу' } = req.body;
+  const { rating = 5, name, phone, message, pluses = 'Поки не бачу', minuses = 'Поки не бачу' } = req.body;
   const avatarId = Math.floor(Math.random() * 21) + 1;
 
 	// Валідація
@@ -48,7 +48,6 @@ router.get('/reviews', async (req, res) => {
        ORDER BY published_at DESC`
     );
     res.json(result.rows);
-    console.log(result.rows);
   } catch (err) {
     console.error('Помилка при отриманні відгуків:', err.message);
     res.status(500).json({ error: 'Не вдалося отримати відгуки...' });
