@@ -109,9 +109,9 @@ function observeAndInitSwiper({ selector, config }) {
   const init = () => {
 		const slider = new Swiper(selector, { ...config });
 		
-		if (selector == "slider_review") {
-			const reviewRenderer = new ReviewRenderer('.reviews__wrapper', '/reviews', slider)
-		}
+		if (selector === ".swiper-review") {
+      new ReviewRenderer('.reviews__wrapper', '/reviews', slider);
+    }
   };
 
   if ('IntersectionObserver' in window) {

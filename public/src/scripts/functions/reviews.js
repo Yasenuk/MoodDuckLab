@@ -41,7 +41,9 @@ export class ReviewRenderer {
             </section>
             <div class="card-review__info-group">
               <h3 class="card-review__user-name">${review.username}</h3>
-              <time class="card-review__datetime" datetime="${review.published_at}" data-time>${new Date(review.published_at).toLocaleDateString()}</time>
+              <time class="card-review__datetime" datetime="${review.published_at}" data-time>
+                ${review.published_at ? new Date(review.published_at).toLocaleDateString() : ''}
+              </time>
             </div>
           </div>
           <ul class="card-review__rating" aria-label="Рейтинг користувача">
@@ -87,7 +89,9 @@ export class ReviewRenderer {
 
   renderList(text) {
     if(!text) return '';
-    return text.split(',').map(item => `<span>${item.trim()}</span>`).join(', ');
+    return text.split(',').map((item, i, arr) =>
+      `<span>${item.trim()}</span>${i < arr.length - 1 ? ', ' : ''}`
+    ).join('');
   }
 
   addReview(review) {
