@@ -10,9 +10,9 @@ const { Pool } = require('pg');
 // });
 
 const pool = new Pool({
-  connectionString: process.env.IDBURL,
+  connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false, // Для Render.com потрібен цей параметр, бо SSL
+    rejectUnauthorized: false,
   },
 });
 
