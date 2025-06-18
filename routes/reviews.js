@@ -48,6 +48,8 @@ router.get('/reviews', async (req, res) => {
        ORDER BY published_at DESC`
     );
     res.json(result.rows);
+    console.log(result.rows);
+    
   } catch (err) {
     console.error('Помилка при отриманні відгуків:', err.message);
     res.status(500).json({ error: 'Не вдалося отримати відгуки...' });
