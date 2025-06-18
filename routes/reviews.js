@@ -10,7 +10,7 @@ router.post('/send-review', reviewLimiter, async (req, res) => {
 
 	// Валідація
 	const isValidName = name => /^[А-Яа-яA-Za-zЇїІіЄєҐґ'’\-\s]{2,50}$/.test(name);
-	const isValidPhone = phone => /^\+380\d{9}$/.test(phone);
+  const isValidPhone = phone => /^380\d{9}$/.test(phone.replace(/\D/g, ''));
 	const isValidMessage = msg => msg && msg.length >= 5 && msg.length <= 500;
 
 	if (!isValidName(name)) return res.status(400).json({ success: false, error: 'Некоректне ім\'я або прізвище' });

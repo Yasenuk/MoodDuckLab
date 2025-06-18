@@ -39,7 +39,6 @@ const sliders = [
         loadPrevNext: true
       },
       watchSlidesProgress: true,
-      freeMode: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -66,8 +65,8 @@ const sliders = [
       lazy: {
         loadPrevNext: true
       },
+      loop: true,
       watchSlidesProgress: true,
-      freeMode: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -93,7 +92,6 @@ const sliders = [
         loadPrevNext: true
       },
       watchSlidesProgress: true,
-      freeMode: true,
       breakpoints: {
         340: { slidesPerView: 1 },
         1024: { slidesPerView: 2 },
@@ -114,17 +112,7 @@ function observeAndInitSwiper({ selector, config }) {
     }
   };
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(([entry], obs) => {
-      if (entry.isIntersecting) {
-        init();
-        obs.disconnect();
-      }
-    });
-    observer.observe(el);
-  } else {
-    init();
-  }
+  init();
 }
 
 window.addEventListener("load", () => {

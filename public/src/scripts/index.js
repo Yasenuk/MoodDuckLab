@@ -1,5 +1,5 @@
 import * as functions from "./functions/functions.min.js";
-import { _Module } from './module.min.js'
+import { _Module } from './module.min.js';
 
 /** Для коректного відображення webp із css */
 functions.isWebp();
@@ -23,6 +23,10 @@ _Module.popup.init();
 _Module.light.init();
 
 /* Інше */
+const phoneInput = document.getElementById('user-phone');
+IMask(phoneInput, {
+	mask: '+{380} (00) 000-00-00'
+});
 
 const cube = document.getElementById("cube");
 if (cube) {
@@ -72,7 +76,7 @@ form.addEventListener('submit', async (e) => {
 	
 	const phoneRegex = /^\+380\d{9}$/;
 
-	if (!phoneRegex.test(data.phone)) {
+	if (!phoneRegex.test(data.phone.replace(/\D/g, ''))) {
 		return alert('Номер телефону має містити 10 цифр');
 	}
 

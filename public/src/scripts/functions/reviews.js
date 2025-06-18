@@ -87,7 +87,7 @@ export class ReviewRenderer {
     return html;
   }
 
-  renderList(text) {
+  renderList(text = "Поки не бачу") {
     return text.split(',').map((item, i, arr) =>
       `<span>${item.trim()}</span>${i < arr.length - 1 ? ', ' : ''}`
     ).join('');

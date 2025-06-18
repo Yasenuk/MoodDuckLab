@@ -3155,24 +3155,24 @@ body._locked {
 }
 @media (min-width: 83.5em) {
   .about__slider {
-    min-height: 28.3125rem;
+    height: 28.3125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 83.5em) {
-  @supports (min-height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem )) {
+  @supports (height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem )) {
     .about__slider {
-      min-height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem );
+      height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem );
     }
   }
-  @supports not (min-height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem )) {
+  @supports not (height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem )) {
     .about__slider {
-      min-height: calc(30.625rem + -2.3125 * (100vw - 20rem) / 63.5);
+      height: calc(30.625rem + -2.3125 * (100vw - 20rem) / 63.5);
     }
   }
 }
 @media (max-width: 20em) {
   .about__slider {
-    min-height: 30.625rem;
+    height: 30.625rem;
   }
 }
 ._watcher-element .about__slider {

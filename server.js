@@ -14,7 +14,15 @@ const PORT = process.env.PORT || 3000;
 app.use(compression());
 
 // Безпечні заголовки
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: {
+    useDefaults: true,
+    directives: {
+      "script-src": ["'self'", "https://unpkg.com"],
+    },
+  },
+}));
+
 
 // Парсинг тіла запиту
 app.use(express.urlencoded({ extended: false }));
