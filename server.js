@@ -40,5 +40,5 @@ app.use((req, res) => {
 
 // Старт
 app.listen(PORT, () => {
-  console.log(`🚀 Сервер працює на http://localhost:${PORT}`);
+  console.log(`Сервер працює`);
 });
