@@ -25,8 +25,6 @@ router.post('/send-review', reviewLimiter, async (req, res) => {
     );
     res.status(200).json({ success: true, message: 'Відгук збережено!' });
   } catch (err) {
-    console.log(pool);
-    
     console.error('Помилка бази:', err.message);
     res.status(500).json({ success: false, error: 'Помилка сервера...' });
 	}
