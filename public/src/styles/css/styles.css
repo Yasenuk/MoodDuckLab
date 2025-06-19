@@ -523,8 +523,8 @@ body._locked {
 .swiper-pagination {
   display: flex;
   align-items: center;
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  -moz-column-gap: 0.3125rem;
+       column-gap: 0.3125rem;
   z-index: 30;
 }
 @media (max-width: 47.99875em) {
@@ -766,7 +766,7 @@ body._locked {
 .swiper-banner .swiper-slide {
   overflow: hidden;
   border-radius: 1.25rem;
-  box-shadow: 0 0 0.0625rem 0.0625rem var(--text-color-light);
+  border: 0.0625rem solid var(--text-color-light);
 }
 
 .swiper-card .swiper-slide {
