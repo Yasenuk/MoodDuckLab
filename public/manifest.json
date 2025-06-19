@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "name": "MoodDuck Lab",
   "short_name": "MoodDuck",
   "start_url": "/",
@@ -20,6 +21,19 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screen1-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/screen2.png",
+      "sizes": "640x1136",
+      "type": "image/png"
     }
   ]
 }
