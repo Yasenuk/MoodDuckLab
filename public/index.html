@@ -144,7 +144,7 @@
 	</style>
 	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
 
-	<link rel="preload" href="./src/images/banners/banner.webp" as="image" imagesrcset="./src/images/banners/banner-750.webp 768w, ./src/images/banners/banner.webp 1335w" imagesizes="100vw">
+	<link rel="preload" href="./src/images/banners/banner_2.webp" as="image" imagesrcset="./src/images/banners/banner_2-750.webp 768w, ./src/images/banners/banner_2.webp 1335w" imagesizes="100vw">
 	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
 
 	<title>MoodDuck Lab - Преміальні ароматизатори для само­замісу</title>
@@ -287,6 +287,26 @@
 							<section class="hero__slide swiper-slide">
 								<picture>
 									<source 
+											srcset="./src/images/banners/banner_2-750.webp 768w, 
+															./src/images/banners/banner_2.webp 1335w" 
+											type="image/webp" 
+											sizes="100vw"
+									/>
+									<img
+											width="1335"
+											height="500"
+											src="./src/images/banners/banner_2.png"
+											alt="Банер"
+											loading="eager"
+											fetchpriority="high"
+											decoding="async"
+											class="hero__banner banner banner_center"
+									/>
+								</picture>
+							</section>
+							<section class="hero__slide swiper-slide">
+								<picture>
+									<source 
 											srcset="./src/images/banners/banner-750.webp 768w, 
 															./src/images/banners/banner.webp 1335w" 
 											type="image/webp" 
@@ -297,9 +317,7 @@
 											height="500"
 											src="./src/images/banners/banner.png"
 											alt="Банер"
-											loading="eager"
-											fetchpriority="high"
-											decoding="async"
+											loading="lazy"
 											class="hero__banner banner banner_center"
 									/>
 								</picture>
@@ -1771,6 +1789,19 @@
 												width="750"
 												height="495"
 												src="./src/images/banners/banner-750.png"
+												alt="Банер"
+												loading="lazy"
+												class="about__banner banner banner_center"
+											/>
+										</picture>
+									</section>
+									<section class="about__slide swiper-slide">
+										<picture>
+											<source srcset="./src/images/banners/banner_2-750.webp" type="image/webp" />
+											<img
+												width="750"
+												height="495"
+												src="./src/images/banners/banner_2-750.png"
 												alt="Банер"
 												loading="lazy"
 												class="about__banner banner banner_center"
