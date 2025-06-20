@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 app.use(compression());
 
 // Безпечні заголовки
-app.use(helmet({
+helmet({
   contentSecurityPolicy: {
     useDefaults: true,
     directives: {
@@ -24,15 +24,19 @@ app.use(helmet({
         "https://www.google-analytics.com",
         "'unsafe-inline'"
       ],
+      "img-src": [
+        "'self'",
+        "data:",
+        "https://www.googletagmanager.com",
+        "https://www.google-analytics.com"
+      ],
       "connect-src": [
         "'self'",
         "https://www.google-analytics.com"
       ]
-    },
-  },
-}));
-
-
+    }
+  }
+});
 
 // Парсинг тіла запиту
 app.use(express.urlencoded({ extended: false }));
