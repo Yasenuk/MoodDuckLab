@@ -18,10 +18,20 @@ app.use(helmet({
   contentSecurityPolicy: {
     useDefaults: true,
     directives: {
-      "script-src": ["'self'"],
+      "script-src": [
+        "'self'",
+        "https://www.googletagmanager.com",
+        "https://www.google-analytics.com",
+        "'unsafe-inline'"
+      ],
+      "connect-src": [
+        "'self'",
+        "https://www.google-analytics.com"
+      ]
     },
   },
 }));
+
 
 
 // Парсинг тіла запиту
