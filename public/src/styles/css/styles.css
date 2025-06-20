@@ -544,18 +544,18 @@ body._locked {
 }
 @media (min-width: 83.5em) {
   .swiper-pagination-bullet {
-    width: 0.9375rem;
+    width: 1.25rem;
   }
 }
 @media (min-width: 20em) and (max-width: 83.5em) {
-  @supports (width: clamp( 0.9375rem , 1.3484251969rem  +  -0.4921259843vw , 1.25rem )) {
+  @supports (width: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
     .swiper-pagination-bullet {
-      width: clamp( 0.9375rem , 1.3484251969rem  +  -0.4921259843vw , 1.25rem );
+      width: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem );
     }
   }
-  @supports not (width: clamp( 0.9375rem , 1.3484251969rem  +  -0.4921259843vw , 1.25rem )) {
+  @supports not (width: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
     .swiper-pagination-bullet {
-      width: calc(1.25rem + -0.3125 * (100vw - 20rem) / 63.5);
+      width: calc(1.25rem + 0 * (100vw - 20rem) / 63.5);
     }
   }
 }

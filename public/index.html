@@ -29,7 +29,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="MoodDuck">
 	<meta name="twitter:description" content="MOOD DUCK – це набори для електронних сигарет нового рівня. Створені на основі преміальних ароматизаторів та виготовлені на потужностях лідера індустрії - FLAVORLAB.">
-	<meta name="twitter:image" content="https://moodduck.com.ua/og-image.png">
+	<meta name="twitter:image" content="https://moodduck.com.ua/og_image.png">
 
 	<meta name="theme-color" content="#000000">
 
@@ -74,11 +74,11 @@
 	<link rel="dns-prefetch" href="https://moodduck.com.ua">
 	<link rel="preconnect" href="https://moodduck.com.ua">
 
-	<link rel="preload" href="./src/images/alternative/graffiti-768.webp" as="image" type="image/webp" media="(max-width: 768px)">
+	<!-- <link rel="preload" href="./src/images/alternative/graffiti-768.webp" as="image" type="image/webp" media="(max-width: 768px)">
 	<link rel="preload" href="./src/images/alternative/graffiti.webp" as="image" type="image/webp" media="(min-width: 769px)">
 
 	<link rel="preload" href="./src/images/alternative/noise-768.webp" as="image" type="image/webp" media="(max-width: 768px)">
-	<link rel="preload" href="./src/images/alternative/noise.webp" as="image" type="image/webp" media="(min-width: 769px)">
+	<link rel="preload" href="./src/images/alternative/noise.webp" as="image" type="image/webp" media="(min-width: 769px)"> -->
 
 	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
 
@@ -190,14 +190,34 @@
 	<title>MoodDuck Lab - Преміальні ароматизатори для само­замісу</title>
 
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN49GCZSG0"></script>
+	<script>
+		function loadGtag() {
+			if (window.gtag) return;
+			var gtagScript = document.createElement('script');
+			gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-QN49GCZSG0";
+			gtagScript.async = true;
+			document.head.appendChild(gtagScript);
+
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			window.gtag = gtag;
+			gtag('js', new Date());
+			gtag('config', 'G-QN49GCZSG0');
+		}
+
+		window.addEventListener('load', () => {
+			setTimeout(loadGtag, 3000);
+		});
+	</script>
+
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN49GCZSG0"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
 		gtag('config', 'G-QN49GCZSG0');
-	</script>
+	</script> -->
 </head>
 
 <body>
@@ -281,7 +301,7 @@
 						</section>
 					</section>
 				</nav>
-				<a href="./index.html" class="header__logo"><img width="117" height="88" loading="eager" fetchpriority="high"
+				<a href="/" class="header__logo"><img width="117" height="88" loading="eager" fetchpriority="high"
 						src="./src/images/logo.svg" alt="Логотип MoodDuck"></a>
 			</section>
 		</header>
