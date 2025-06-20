@@ -61,6 +61,7 @@ export class Popup {
 		popup.is_open = true;
 		popup?.element?.classList?.add("_open");
 		document.body.classList.add("_locked");
+		popup?.element?.removeAttribute("aria-hidden");
 	}
 
 	close(popup) {

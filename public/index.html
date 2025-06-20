@@ -11,7 +11,7 @@
 		
 	<meta name="keywords" content="Мудак, Муддак, Муд Дак, MoodDuck, Mood Duck, Mud Duck, Mud Dack, Lab, Лаб, liquid, ліквід, POD-системи, вейп, оригінальний бренд, vape, Ukraine, Україна, рідини, набори для самозамісу, самозаміси, жижа, жижки, електронні сигарети, електронки, вейп, заправки, для вейпів, пода, набори, пахучки, ароматизатори, стрічка, пакет, лента для пода, сольові рідини, salt, поди">
 	
-	<link rel="shortcut icon" href="https://moodduck.com.ua/favicon.ico" type="image/svg+xml">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/svg+xml">
 
 	<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152.png">
@@ -74,9 +74,17 @@
 	<link rel="dns-prefetch" href="https://moodduck.com.ua">
 	<link rel="preconnect" href="https://moodduck.com.ua">
 
-	<link rel="preload" href="./src/images/alternative/graffiti.webp" as="image" imagesrcset="./src/images/alternative/graffiti-768.webp 768w, ./src/images/alternative/graffiti.webp 1440w" imagesizes="100vw">
-	<link rel="preload" href="./src/images/alternative/noise.webp" as="image" imagesrcset="./src/images/alternative/noise-768.webp 768w, ./src/images/alternative/noise.webp 1440w" imagesizes="100vw">
-	
+	<link rel="preload" href="./src/images/alternative/graffiti-768.webp" as="image" type="image/webp" media="(max-width: 768px)">
+	<link rel="preload" href="./src/images/alternative/graffiti.webp" as="image" type="image/webp" media="(min-width: 769px)">
+
+	<link rel="preload" href="./src/images/alternative/noise-768.webp" as="image" type="image/webp" media="(max-width: 768px)">
+	<link rel="preload" href="./src/images/alternative/noise.webp" as="image" type="image/webp" media="(min-width: 769px)">
+
+	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
+
+	<link rel="preload" href="./src/images/banners/banner_2-750.webp" as="image" type="image/webp" media="(max-width: 768px)">
+	<link rel="preload" href="./src/images/banners/banner_2.webp" as="image" type="image/webp" media="(min-width: 769px)">
+
 	<style>
 		* {
 			padding: 0px;
@@ -178,9 +186,6 @@
 		}
 	</style>
 	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
-
-	<link rel="preload" href="./src/images/banners/banner_2.webp" as="image" imagesrcset="./src/images/banners/banner_2-750.webp 768w, ./src/images/banners/banner_2.webp 1335w" imagesizes="100vw">
-	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
 
 	<title>MoodDuck Lab - Преміальні ароматизатори для само­замісу</title>
 </head>
@@ -2396,7 +2401,7 @@
 		</footer>
 
 		<section class="popup" id="popup-review" role="dialog" title="Попап, щоб залишити відгук"
-			aria-labelledby="Попап, щоб залишити відгук" aria-modal="true" data-popup>
+			aria-labelledby="Попап, щоб залишити відгук" aria-modal="true" data-popup aria-hidden="true">
 			<section class="popup__wrapper">
 				<section class="popup__body">
 					<header class="popup__header">
@@ -2461,7 +2466,7 @@
 		</section>
 
 		<section class="popup popup-menu" id="popup-menu" role="dialog" title="Попап для перегляду меню смаків"
-			aria-labelledby="Попап для перегляду меню смаків" aria-modal="true" data-popup>
+			aria-labelledby="Попап для перегляду меню смаків" aria-modal="true" data-popup aria-hidden="true">
 			<section class="popup__wrapper popup-menu__wrapper">
 				<section class="popup__body popup-menu__body">
 					<header class="popup__header popup-menu__header">
