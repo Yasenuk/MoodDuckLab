@@ -115,6 +115,6 @@ function observeAndInitSwiper({ selector, config }) {
   init();
 }
 
-window.addEventListener("load", () => {
-  sliders.forEach(slider => observeAndInitSwiper(slider));
-});
+// window.addEventListener("load", () => {
+sliders.forEach(slider => observeAndInitSwiper(slider));
+// });
