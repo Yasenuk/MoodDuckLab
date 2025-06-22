@@ -74,7 +74,7 @@ form.addEventListener('submit', async (e) => {
   const formData = new FormData(form);
 	const data = Object.fromEntries(formData.entries());
 	
-	const phoneRegex = /^\+380\d{9}$/;
+	const phoneRegex = /^380\d{9}$/;
 
 	if (!phoneRegex.test(data.phone.replace(/\D/g, ''))) {
 		return alert('Номер телефону має містити 10 цифр');

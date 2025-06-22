@@ -22,14 +22,14 @@
 
 	<meta property="og:title" content="MoodDuck">
 	<meta property="og:description" content="MOOD DUCK – це набори для електронних сигарет нового рівня. Створені на основі преміальних ароматизаторів та виготовлені на потужностях лідера індустрії - FLAVORLAB.">
-	<meta property="og:image" content="https://moodduck.com.ua/og_image.png">
+	<meta property="og:image" content="https://moodduck.com.ua/src/images/banners/banner_2.png">
 	<meta property="og:url" content="https://moodduck.com.ua">
 	<meta property="og:type" content="website">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="MoodDuck">
 	<meta name="twitter:description" content="MOOD DUCK – це набори для електронних сигарет нового рівня. Створені на основі преміальних ароматизаторів та виготовлені на потужностях лідера індустрії - FLAVORLAB.">
-	<meta name="twitter:image" content="https://moodduck.com.ua/og_image.png">
+	<meta name="twitter:image" content="https://moodduck.com.ua/src/images/banners/banner_2.png">
 
 	<meta name="theme-color" content="#000000">
 
@@ -2465,11 +2465,11 @@
 							<section class="form-review__row">
 								<div class="form-review__column">
 									<label class="form-review__label" for="user-name">Прізвище та Ім’я</label>
-									<input type="text" name="name" id="user-name" class="form-review__input" pattern="[А-Яа-яA-Za-zЇїІіЄєҐґ'’\-\s]{2,50}$" autocomplete="off" required>
+									<input type="text" name="name" id="user-name" class="form-review__input" pattern="[А-Яа-яA-Za-zЇїІіЄєҐґ'’\-\s]{2,50}$" autocomplete="name" required>
 								</div>
 								<div class="form-review__column">
 									<label class="form-review__label" for="user-phone">Номер телефону</label>
-									<input type="tel" id="user-phone" name="phone" class="form-review__input" autocomplete="off" required
+									<input type="tel" id="user-phone" name="phone" class="form-review__input" autocomplete="tel" required
 										title="+380 (XX) XXX-XX-XX" placeholder="+380 (__) ___-__-__">
 								</div>
 							</section>
@@ -2572,7 +2572,128 @@
 
 	</section>
 
-	<script type="module" defer src="./src/scripts/libs/sliders.min.js"></script>
+	<script type="module">
+		import { Swiper } from "./src/scripts/libs/swiper/swiper-bundle.min.mjs";
+		import { ReviewRenderer } from "./src/scripts/functions/reviews.min.js";
+
+		const sliders = [
+			{
+				selector: ".swiper-banner",
+				config: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					speed: 800,
+					grabCursor: true,
+					preloadImages: true,
+					lazy: {
+						loadPrevNext: true
+					},
+					lazy: true,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						prevEl: ".swiper-button-prev",
+						nextEl: ".swiper-button-next",
+					},
+				},
+			},
+			{
+				selector: ".swiper-card",
+				config: {
+					slidesPerView: 1,
+					spaceBetween: 8,
+					speed: 800,
+					grabCursor: true,
+					loop: true,
+					loopedSlides: 21,
+					preloadImages: false,
+					lazy: {
+						loadPrevNext: true
+					},
+					watchSlidesProgress: true,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						prevEl: ".swiper-button-prev",
+						nextEl: ".swiper-button-next",
+					},
+					breakpoints: {
+						540: { slidesPerView: 2 },
+						760: { slidesPerView: 3 },
+						1024: { slidesPerView: 4 },
+					},
+				},
+			},
+			{
+				selector: ".swiper-review",
+				config: {
+					slidesPerView: 2,
+					spaceBetween: 8,
+					speed: 800,
+					grabCursor: true,
+					preloadImages: false,
+					lazy: {
+						loadPrevNext: true
+					},
+					loop: true,
+					watchSlidesProgress: true,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						prevEl: ".swiper-button-prev",
+						nextEl: ".swiper-button-next",
+					},
+					breakpoints: {
+						320: { slidesPerView: 1 },
+						992: { slidesPerView: 2 },
+					},
+				}
+			},
+			{
+				selector: ".swiper-menu",
+				config: {
+					slidesPerView: 2,
+					spaceBetween: 8,
+					speed: 800,
+					grabCursor: true,
+					lazy: {
+						loadPrevNext: true
+					},
+					watchSlidesProgress: true,
+					breakpoints: {
+						340: { slidesPerView: 1 },
+						1024: { slidesPerView: 2 },
+					},
+				},
+			},
+		];
+
+		function observeAndInitSwiper({ selector, config }) {
+			const el = document.querySelector(selector);
+			if (!el) return;
+
+			const init = () => {
+				const slider = new Swiper(selector, { ...config });
+				
+				if (selector === ".swiper-review") {
+					new ReviewRenderer('.reviews__wrapper', '/reviews', slider);
+				}
+			};
+
+			init();
+		}
+
+		window.addEventListener("load", () => {
+			sliders.forEach(slider => observeAndInitSwiper(slider));
+		});
+
+	</script>
 	<script type="module" defer src="./src/scripts/libs/imask.min.js"></script>
 	<script type="module" defer src="./src/scripts/index.min.js"></script>
 </body>

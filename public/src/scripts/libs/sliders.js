@@ -1,4 +1,3 @@
-// === SwiperManager.js ===
 import { Swiper } from "./swiper/swiper-bundle.min.mjs";
 import { ReviewRenderer } from "../functions/reviews.min.js";
 

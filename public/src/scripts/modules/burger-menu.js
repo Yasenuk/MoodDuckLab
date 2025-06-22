@@ -1,6 +1,7 @@
 export class BurgerMenu {
 	constructor() {
 		this.menues = [];
+		this.is_open = false;
 	}
 
 	init() {
@@ -10,23 +11,43 @@ export class BurgerMenu {
 
 			this.menues.push({ burger: menu, close_btn });
 
-			close_btn.addEventListener("click", () => this.toggle(menu, close_btn));
+			close_btn.addEventListener("click", () => {
+				if (this.is_open) {
+					this.close(menu, close_btn)
+				} else this.open(menu, close_btn)
+			});
+
+			const burgerLinks = menu.querySelectorAll('a[href^="#"]');
+			burgerLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					this.close(menu, close_btn);
+				});
+			});
 		});
 	}
 
-	toggle(menu, button) {
-		const isOpen = menu.classList.toggle("_open");
-		document.body.classList.toggle("_locked", isOpen);
+	open(menu, button) {
+		this.is_open = true;
+		menu.classList.add("_open");
+		document.body.classList.add("_locked");
 
 		button.setAttribute(
 			"aria-label",
-			isOpen ? "Закрити меню-бургер" : "Відкрити меню-бургер"
+			"Закрити меню-бургер"
 		);
 
-		// accessibility: фокус на перший елемент в меню
-		if (isOpen) {
-			const focusable = menu.querySelector("a, button, input, [tabindex]:not([tabindex='-1'])");
-			focusable?.focus();
-		}
+		const focusable = menu.querySelector("a, button, input, [tabindex]:not([tabindex='-1'])");
+		focusable?.focus();
+	}
+
+	close(menu, button) {
+		this.is_open = false;
+		menu.classList.remove("_open");
+		document.body.classList.remove("_locked");
+
+		button.setAttribute(
+			"aria-label",
+			"Відкрити меню-бургер"
+		);
 	}
 }
