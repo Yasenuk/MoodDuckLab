@@ -2410,41 +2410,21 @@ body._locked {
 .main__bg-group_noises {
   opacity: 1;
 }
-@media (max-width: 47.99875em) {
-  .no-webp .main__bg-group_noises {
-    background-image: url(../../images/alternative/noise-750.png);
-  }
-  .webp .main__bg-group_noises {
-    background-image: url(../../images/alternative/noise-750.webp);
-  }
+.no-webp .main__bg-group_noises {
+  background-image: url(../../images/alternative/noise.png);
 }
-@media (min-width: 47.99875em) {
-  .no-webp .main__bg-group_noises {
-    background-image: url(../../images/alternative/noise.png);
-  }
-  .webp .main__bg-group_noises {
-    background-image: url(../../images/alternative/noise.webp);
-  }
+.webp .main__bg-group_noises {
+  background-image: url(../../images/alternative/noise.webp);
 }
 .main__bg-group_graffities {
   opacity: 0.2;
   mix-blend-mode: darken;
 }
-@media (max-width: 47.99875em) {
-  .no-webp .main__bg-group_graffities {
-    background-image: url(../../images/alternative/graffiti-750.png);
-  }
-  .webp .main__bg-group_graffities {
-    background-image: url(../../images/alternative/graffiti-750.webp);
-  }
+.no-webp .main__bg-group_graffities {
+  background-image: url(../../images/alternative/graffiti.png);
 }
-@media (min-width: 47.99875em) {
-  .no-webp .main__bg-group_graffities {
-    background-image: url(../../images/alternative/graffiti.png);
-  }
-  .webp .main__bg-group_graffities {
-    background-image: url(../../images/alternative/graffiti.webp);
-  }
+.webp .main__bg-group_graffities {
+  background-image: url(../../images/alternative/graffiti.webp);
 }
 .main__bg-group_noises, .main__bg-group_graffities {
   position: absolute;
