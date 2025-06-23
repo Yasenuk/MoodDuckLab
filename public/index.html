@@ -2717,7 +2717,7 @@
 				customInit: (swiper) => {
 					const container = document.querySelector('.swiper-review .swiper-wrapper');
 
-					new ReviewRenderer('.reviews__wrapper', '/reviews', null).then(() => {
+					new ReviewRenderer('.reviews__wrapper', '/reviews', swiper).then(() => {
 						const slides = container.querySelectorAll('.swiper-slide');
 
 						if (slides.length < 3) {
@@ -2725,7 +2725,10 @@
 							swiper.loopDestroy();
 							swiper.update();
 						} else {
+							swiper.loopDestroy();
+							swiper.loopCreate();
 							swiper.update();
+							swiper.slideToLoop(0, 0);
 						}
 					});
 				}
