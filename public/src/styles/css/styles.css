@@ -594,6 +594,7 @@ body._locked {
   display: flex;
   align-items: center;
   z-index: 30;
+  pointer-events: none;
 }
 @media (min-width: 83.5em) {
   .swiper-buttons {
@@ -626,6 +627,7 @@ body._locked {
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: all;
   aspect-ratio: 1/1;
   transition: opacity 0.3s, background-color 0.3s;
   opacity: 1;
@@ -1108,6 +1110,22 @@ body._locked {
      object-position: center;
 }
 
+.main-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+[id] {
+  scroll-margin-top: 9.375rem;
+}
+
 .-nowrap {
   white-space: nowrap;
 }
@@ -1178,6 +1196,10 @@ body._locked {
 .banner_right {
   -o-object-position: right center;
      object-position: right center;
+}
+.banner_bottom {
+  -o-object-position: right bottom;
+     object-position: right bottom;
 }
 
 .heading {
@@ -3194,6 +3216,32 @@ body._locked {
 ._watched .about__slider {
   transition: opacity 0.8s cubic-bezier(0.51, 0.38, 0.62, 1.49) 0.5s;
   opacity: 1;
+}
+.about__banner {
+  max-width: 100%;
+  width: 100%;
+}
+@media (min-width: 83.5em) {
+  .about__banner {
+    height: 28.3125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 83.5em) {
+  @supports (height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem )) {
+    .about__banner {
+      height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem );
+    }
+  }
+  @supports not (height: clamp( 28.3125rem , 31.3533464567rem  +  -3.6417322835vw , 30.625rem )) {
+    .about__banner {
+      height: calc(30.625rem + -2.3125 * (100vw - 20rem) / 63.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .about__banner {
+    height: 30.625rem;
+  }
 }
 .brand-info__container {
   position: relative;

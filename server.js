@@ -29,7 +29,8 @@ app.use(helmet({
         "'self'",
         "data:",
         "https://www.googletagmanager.com",
-        "https://www.google-analytics.com"
+        "https://www.google-analytics.com",
+        "https://moodduck.com.ua"
       ],
       "connect-src": [
         "'self'",
@@ -38,6 +39,7 @@ app.use(helmet({
     }
   }
 }));
+
 
 // Парсинг тіла запиту
 app.use(express.urlencoded({ extended: false }));

@@ -1,7 +1,7 @@
 {
-  "name": "MoodDuck Lab",
+  "name": "MoodDuck",
   "short_name": "MoodDuck",
-  "start_url": "https://moodduck.com.ua/",
+  "start_url": "https://moodduck.com.ua",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
