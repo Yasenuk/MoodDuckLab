@@ -23,6 +23,12 @@ app.use(helmet({
         "'self'",
         "https://www.googletagmanager.com",
         "https://www.google-analytics.com",
+        "'unsafe-inline'",
+        "'unsafe-hashes'",
+        "'wasm-unsafe-eval'"
+      ],
+      "script-src-attr": [
+        "'self'",
         "'unsafe-inline'"
       ],
       "img-src": [
@@ -35,11 +41,14 @@ app.use(helmet({
       "connect-src": [
         "'self'",
         "https://www.google-analytics.com"
+      ],
+      "style-src": [
+        "'self'",
+        "'unsafe-inline'"
       ]
     }
   }
 }));
-
 
 // Парсинг тіла запиту
 app.use(express.urlencoded({ extended: false }));
