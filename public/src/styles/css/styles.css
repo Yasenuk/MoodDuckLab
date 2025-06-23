@@ -208,7 +208,6 @@ html {
 
 body._locked {
   overflow: hidden;
-  touch-action: none;
   overscroll-behavior: none;
 }
 .wrapper {
@@ -2783,10 +2782,6 @@ body._locked {
     height: 52.125rem;
   }
 }
-.main__page-404 {
-  min-height: 100dvh;
-  height: 100dvh;
-}
 .main__page-404_light {
   left: 0;
   transform: translateY(-100%) translateX(0) scale(-1);
@@ -2861,6 +2856,12 @@ body._locked {
   }
 }
 
+.page-404__container {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 @media (min-width: 83.5em) {
   .page-404__container {
     padding-top: 9.375rem;

@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 app.use(compression());
 
 // Безпечні заголовки
-helmet({
+app.use(helmet({
   contentSecurityPolicy: {
     useDefaults: true,
     directives: {
@@ -37,7 +37,7 @@ helmet({
       ]
     }
   }
-});
+}));
 
 // Парсинг тіла запиту
 app.use(express.urlencoded({ extended: false }));
@@ -46,6 +46,14 @@ app.use(express.json());
 // Публічні файли
 app.use(express.static('public'));
 
+app.get("/robots.txt", (req, res, next) => {
+  res.removeHeader("Content-Security-Policy");
+  res.type("text/plain");
+  res.send(`User-agent: *
+Disallow:
+
+Sitemap: https://moodduck.com.ua/sitemap.xml`);
+});
 
 // Головна
 app.get('/', (req, res) => {

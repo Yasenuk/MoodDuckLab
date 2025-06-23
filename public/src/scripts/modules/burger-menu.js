@@ -35,9 +35,6 @@ export class BurgerMenu {
 			"aria-label",
 			"Закрити меню-бургер"
 		);
-
-		const focusable = menu.querySelector("a, button, input, [tabindex]:not([tabindex='-1'])");
-		focusable?.focus();
 	}
 
 	close(menu, button) {
