@@ -2768,12 +2768,35 @@
 				},
 			},
 			{
-				selector: ".swiper-card",
+				selector: ".gallery-flavours__slider",
 				config: {
 					slidesPerView: 1,
 					spaceBetween: 8,
 					loop: true,
 					loopedSlides: 21,
+					preloadImages: false,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						prevEl: ".swiper-button-prev",
+						nextEl: ".swiper-button-next",
+					},
+					breakpoints: {
+						540: { slidesPerView: 2 },
+						760: { slidesPerView: 3 },
+						1024: { slidesPerView: 4 },
+					},
+				},
+			},
+			{
+				selector: ".gallery-merch__slider",
+				config: {
+					slidesPerView: 1,
+					spaceBetween: 8,
+					loop: true,
+					loopedSlides: 10,
 					preloadImages: false,
 					pagination: {
 						el: ".swiper-pagination",
@@ -2854,7 +2877,7 @@
 					obs.disconnect();
 				}
 			}, {
-				rootMargin: '150px',
+				rootMargin: '200px',
 			});
 
 			observer.observe(el);
