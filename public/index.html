@@ -2620,155 +2620,166 @@
 	</section>
 
 	<script type="module">
-		import { Swiper } from "./src/scripts/libs/swiper/swiper-bundle.min.mjs";
-		import { ReviewRenderer } from "./src/scripts/functions/reviews.min.js";
+    import { Swiper } from "./src/scripts/libs/swiper/swiper-bundle.min.mjs";
+    import { ReviewRenderer } from "./src/scripts/functions/reviews.min.js";
 
-		const defaultConfig = {
-			speed: 800,
-			grabCursor: true,
-			watchSlidesProgress: true,
-			lazy: {
-				loadPrevNext: true,
-			},
-		};
+    const defaultConfig = {
+        speed: 800,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+    };
 
-		const sliders = [
-			{
-				selector: ".swiper-banner",
-				config: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-					preloadImages: true,
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true,
-					},
-					navigation: {
-						prevEl: ".swiper-button-prev",
-						nextEl: ".swiper-button-next",
-					},
-				},
-			},
-			{
-				selector: ".gallery-flavours__slider",
-				config: {
-					slidesPerView: 1,
-					spaceBetween: 8,
-					loop: true,
-					loopedSlides: 21,
-					preloadImages: false,
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true,
-					},
-					navigation: {
-						prevEl: ".swiper-button-prev",
-						nextEl: ".swiper-button-next",
-					},
-					breakpoints: {
-						540: { slidesPerView: 2 },
-						760: { slidesPerView: 3 },
-						1024: { slidesPerView: 4 },
-					},
-				},
-			},
-			{
-				selector: ".gallery-merch__slider",
-				config: {
-					slidesPerView: 1,
-					spaceBetween: 8,
-					loop: true,
-					loopedSlides: 10,
-					preloadImages: false,
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true,
-					},
-					navigation: {
-						prevEl: ".swiper-button-prev",
-						nextEl: ".swiper-button-next",
-					},
-					breakpoints: {
-						540: { slidesPerView: 2 },
-						760: { slidesPerView: 3 },
-						1024: { slidesPerView: 4 },
-					},
-				},
-			},
-			{
-				selector: ".swiper-review",
-				config: {
-					slidesPerView: 2,
-					spaceBetween: 8,
-					loop: true,
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true,
-					},
-					navigation: {
-						prevEl: ".swiper-button-prev",
-						nextEl: ".swiper-button-next",
-					},
-					breakpoints: {
-						320: { slidesPerView: 1 },
-						992: { slidesPerView: 2 },
-					},
-				},
-				customInit: (swiper) => {
-					const container = document.querySelector('.swiper-review .swiper-wrapper');
+    const slidersConfig = {
+        banner: {
+            selector: ".swiper-banner",
+            config: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                preloadImages: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next",
+                },
+            }
+        },
+        flavours: {
+            selector: ".gallery-flavours__slider",
+            config: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+                loop: true,
+                loopedSlides: 21,
+                preloadImages: false,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next",
+                },
+                breakpoints: {
+                    540: { slidesPerView: 2 },
+                    760: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 },
+                },
+            }
+        },
+        merch: {
+            selector: ".gallery-merch__slider",
+            config: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+                loop: true,
+                loopedSlides: 10,
+                preloadImages: false,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next",
+                },
+                breakpoints: {
+                    540: { slidesPerView: 2 },
+                    760: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 },
+                },
+            }
+        },
+        review: {
+            selector: ".swiper-review",
+            config: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next",
+                },
+                breakpoints: {
+                    320: { slidesPerView: 1 },
+                    992: { slidesPerView: 2 },
+                },
+            },
+            customInit: async (swiper) => {
+                const container = document.querySelector('.swiper-review .swiper-wrapper');
+                await new ReviewRenderer('.reviews__wrapper', '/reviews', swiper);
+                
+                const slides = container.querySelectorAll('.swiper-slide');
+                if (!slides.length) return;
 
-					new ReviewRenderer('.reviews__wrapper', '/reviews', swiper).then(() => {
-						const slides = container.querySelectorAll('.swiper-slide');
+                slides[0]?.classList.add("swiper-slide-active");
+                
+                if (slides.length < 3) {
+                    swiper.params.loop = false;
+                    swiper.loopDestroy();
+                } else {
+                    swiper.loopDestroy();
+                    swiper.loopCreate();
+                    swiper.slideToLoop(0, 0);
+                }
+                swiper.update();
+            }
+        },
+        menu: {
+            selector: ".swiper-menu",
+            config: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+                breakpoints: {
+                    340: { slidesPerView: 1 },
+                    1024: { slidesPerView: 2 },
+                },
+            }
+        }
+    };
 
-						if (slides.length < 3) {
-							swiper.params.loop = false;
-							swiper.loopDestroy();
-							swiper.update();
-						} else {
-							swiper.loopDestroy();
-							swiper.loopCreate();
-							swiper.update();
-							swiper.slideToLoop(0, 0);
-						}
-					});
-				}
-			},
-			{
-				selector: ".swiper-menu",
-				config: {
-					slidesPerView: 2,
-					spaceBetween: 8,
-					breakpoints: {
-						340: { slidesPerView: 1 },
-						1024: { slidesPerView: 2 },
-					},
-				},
-			},
-		];
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sliderId = entry.target.dataset.sliderId;
+                const config = slidersConfig[sliderId];
+                if (!config || entry.target._swiper) return;
+                
+                const swiper = new Swiper(entry.target, { 
+                    ...defaultConfig, 
+                    ...config.config 
+                });
+                
+                entry.target._swiper = swiper;
+                
+                if (typeof config.customInit === 'function') {
+                    config.customInit(swiper);
+                }
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+			rootMargin: '200px',
+			threshold: 0.01
+    });
 
-		function observeAndInitSwiper({ selector, config, customInit }) {
+    Object.entries(slidersConfig).forEach(([id, { selector }]) => {
 			const el = document.querySelector(selector);
-			if (!el) return;
-
-			let hasInit = false;
-
-			const observer = new IntersectionObserver(([entry], obs) => {
-				if (entry.isIntersecting && !hasInit) {
-					hasInit = true;
-					const swiper = new Swiper(el, { ...defaultConfig, ...config });
-					if (typeof customInit === 'function') {
-						customInit(swiper);
-					}
-					obs.disconnect();
-				}
-			}, {
-				rootMargin: '200px',
-			});
-
-			observer.observe(el);
-		}
-
-		sliders.forEach(slider => observeAndInitSwiper(slider));
+			if (el) {
+				el.dataset.sliderId = id;
+				observer.observe(el);
+			}
+    });
 	</script>
 
 	<script type="module" async src="./src/scripts/libs/imask.min.js"></script>
