@@ -18,6 +18,7 @@ helmet({
   contentSecurityPolicy: {
     useDefaults: true,
     directives: {
+      "default-src": ["'self'"],
       "script-src": [
         "'self'",
         "https://www.googletagmanager.com",

@@ -2783,6 +2783,10 @@ body._locked {
     height: 52.125rem;
   }
 }
+.main__page-404 {
+  min-height: 100dvh;
+  height: 100dvh;
+}
 .main__page-404_light {
   left: 0;
   transform: translateY(-100%) translateX(0) scale(-1);
