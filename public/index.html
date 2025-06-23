@@ -4,9 +4,16 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+	<meta http-equiv="Accept-CH-Lifetime" content="86400">
+
 	<meta name="author" content="MoodDuck Lab" />
 	<meta name="description" content="MOOD DUCK – це набори для електронних сигарет нового рівня. Створені на основі преміальних ароматизаторів та виготовлені на потужностях лідера індустрії - FLAVORLAB." />
 	<meta name="keywords" content="Офіційний сайт, Мудак, Муддак, Муд Дак, MoodDuck, Mood Duck, Mud Duck, Mud Dack, Lab, Лаб, liquid, ліквід, POD-системи, вейп, оригінальний бренд, vape, Ukraine, Україна, рідини, набори для самозамісу, самозаміси, жижа, жижки, електронні сигарети, електронки, вейп, заправки, для вейпів, пода, набори, пахучки, ароматизатори, стрічка, пакет, лента для пода, сольові рідини, salt, поди" />
+	<meta name="google-site-verification" content="iTaQelwtbsI2NgcaG8T7cAMsYiywNz8-2AmTjy4SvN8" />
+	
+	<meta name="theme-color" content="#000000">
+
 	<link rel="canonical" href="https://moodduck.com.ua/" />
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -89,118 +96,31 @@
 	<!-- Performance Hints -->
 	<link rel="dns-prefetch" href="https://moodduck.com.ua">
 	<link rel="preconnect" href="https://moodduck.com.ua">
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
 
 	<!-- Images Preload -->
-	<!-- <link rel="preload" href="./src/images/alternative/graffiti-768.webp" as="image" type="image/webp" media="(max-width: 768px)">
-	<link rel="preload" href="./src/images/alternative/graffiti.webp" as="image" type="image/webp" media="(min-width: 769px)">
-	<link rel="preload" href="./src/images/alternative/noise-768.webp" as="image" type="image/webp" media="(max-width: 768px)">
-	<link rel="preload" href="./src/images/alternative/noise.webp" as="image" type="image/webp" media="(min-width: 769px)"> -->
+	<link rel="preload" href="./src/images/banners/banner_2-400.webp" as="image" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+	<link rel="preload" href="./src/images/banners/banner_2-750.webp" as="image" type="image/webp" media="(min-width: 769px) and (max-width: 992px)" fetchpriority="high">
+	<link rel="preload" href="./src/images/banners/banner_2.webp" as="image" type="image/webp" media="(min-width: 993px)" fetchpriority="high">
 	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
-	<link rel="preload" href="./src/images/banners/banner_2-400.webp" as="image" type="image/webp" media="(max-width: 768px)">
-	<link rel="preload" href="./src/images/banners/banner_2-750.webp" as="image" type="image/webp" media="(min-width: 769px) and (max-width: 992px)">
-	<link rel="preload" href="./src/images/banners/banner_2.webp" as="image" type="image/webp" media="(min-width: 993px)">
-
 
 	<!-- Manifest -->
 	<!-- <link rel="manifest" href="/manifest.json"> -->
 
 	<!-- Base Styles -->
+	<link rel="preload" href="./src/styles/css/reset.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="./src/styles/css/reset.min.css"></noscript>
+
 	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
 
-	<!-- Inline Reset Styles (опційно краще виносити в reset.css) -->
+	<!-- Inline Reset Styles -->
 	<style>
-		* {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-		}
-
-		*,
-		*::before,
-		*::after {
-			box-sizing: border-box;
-		}
-
-		*::before,
-		*::after {
-			display: inline-block;
-		}
-
-		:focus,
-		:active {
-			outline: none;
-		}
-
-		a:focus,
-		a:active {
-			outline: none;
-		}
-
-		html, body {
-			height: 100%;
-			min-width: 20rem;
-		}
-		body {
-			background-color: #000;
-			color: #fff;
-			line-height: 1;
-			font-family: "Gilroy";
-			font-size: 1.125rem;
-			text-rendering: optimizeLegibility;
-			-ms-text-size-adjust: 100%;
-			-moz-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
-		input, button, textarea {
-			font-family: "Gilroy";
-			font-size: inherit;
-			line-height: inherit;
-			color: inherit;
-			background-color: transparent;
-		}
-		input, textarea { width: 100%; }
-		label { display: inline-block; }
-		button, select, option {cursor: pointer;}
-		a {
-			display: inline-block;
-			color: inherit;
-			text-decoration: none;
-		}
-		ul, li { list-style: none; }
-		img { vertical-align: top; }
-		h1, h2, h3, h4, h5, h6 {
-			font-weight: inherit;
-			font-size: inherit;
-		}
-		html { scroll-behavior: smooth; }
+	
 	</style>
 
 	<link rel="modulepreload" href="/src/scripts/libs/swiper/swiper-bundle.min.mjs">
-
-	<!-- Analytics -->
-	<script>
-		function loadGtag() {
-			if (window.gtag) return;
-			const script = document.createElement('script');
-			script.src = "https://www.googletagmanager.com/gtag/js?id=G-QN49GCZSG0";
-			script.async = true;
-			document.head.appendChild(script);
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			window.gtag = gtag;
-			gtag('js', new Date());
-			gtag('config', 'G-QN49GCZSG0');
-		}
-		window.addEventListener('load', () => {
-			if ('requestIdleCallback' in window) {
-				requestIdleCallback(loadGtag);
-			} else {
-				setTimeout(loadGtag, 3000);
-			}
-		});
-	</script>
+	<link rel="modulepreload" href="/src/scripts/functions/reviews.min.js">
 
 	<title>MoodDuck - Преміальні ароматизатори для само­замісу</title>
 </head>
@@ -2784,6 +2704,25 @@
 
 	<script type="module" async src="./src/scripts/libs/imask.min.js"></script>
 	<script type="module" async src="./src/scripts/index.min.js"></script>
+	<script>
+    window.addEventListener('load', () => {
+			if ('requestIdleCallback' in window) {
+				requestIdleCallback(() => {
+					const script = document.createElement('script');
+					script.src = "https://www.googletagmanager.com/gtag/js?id=G-QN49GCZSG0";
+					script.async = true;
+					document.head.appendChild(script);
+					
+					window.dataLayer = window.dataLayer || [];
+					window.gtag = function(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-QN49GCZSG0', {transport_type: 'beacon'});
+				}, {timeout: 2000});
+			} else {
+				setTimeout(loadGtag, 3000);
+			}
+    });
+	</script>
 </body>
 
 </html>
