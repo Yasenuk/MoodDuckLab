@@ -4,6 +4,10 @@ node_modules/
 .env.*.local
 .env.local
 
+MoodDuck.env
+MoodDuck.env.*.local
+MoodDuck.env.local
+
 scss/
 
 npm-debug.log*

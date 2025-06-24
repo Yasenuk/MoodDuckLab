@@ -13,9 +13,9 @@ router.post('/send-review', reviewLimiter, async (req, res) => {
   const isValidPhone = phone => /^380\d{9}$/.test(phone.replace(/\D/g, ''));
 	const isValidMessage = msg => msg && msg.length >= 5 && msg.length <= 500;
 
-	if (!isValidName(name)) return res.status(400).json({ success: false, error: 'Некоректне ім\'я або прізвище' });
-	if (!isValidPhone(phone)) return res.status(400).json({ success: false, error: 'Некоректний номер телефону' });
-	if (!isValidMessage(message)) return res.status(400).json({ success: false, error: 'Відгук занадто короткий' });
+	if (!isValidName(name)) return res.status(400).json({ success: false, error: 'Некоректне ім\'я або прізвище!' });
+	if (!isValidPhone(phone)) return res.status(400).json({ success: false, error: 'Некоректний номер телефону!' });
+	if (!isValidMessage(message)) return res.status(400).json({ success: false, error: 'Відгук занадто короткий або превищив 500 символів!' });
 
   try {
     await pool.query(
@@ -28,15 +28,6 @@ router.post('/send-review', reviewLimiter, async (req, res) => {
     console.error('Помилка бази:', err.message);
     res.status(500).json({ success: false, error: 'Помилка сервера...' });
 	}
-	
-	// Перевірка перевищення ліміту
-  const tooManyRequests = false;
-
-  if (tooManyRequests && req.body.subscription) {
-    const payload = getRateLimitMessage(req.body.name);
-    await sendPushNotification(req.body.subscription, payload);
-    return res.status(429).json({ success: false, error: 'Забагато запитів!' });
-  }
 });
 
 // Вивід відгуків

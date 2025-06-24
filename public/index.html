@@ -111,13 +111,7 @@
 	<!-- Base Styles -->
 	<link rel="preload" href="./src/styles/css/reset.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="./src/styles/css/reset.min.css"></noscript>
-
 	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
-
-	<!-- Inline Reset Styles -->
-	<style>
-	
-	</style>
 
 	<link rel="modulepreload" href="/src/scripts/libs/swiper/swiper-bundle.min.mjs">
 	<link rel="modulepreload" href="/src/scripts/functions/reviews.min.js">
@@ -276,23 +270,23 @@
 							<section class="hero__slide swiper-slide">
 								<picture>
 									<source
-										media="(max-width: 519px)"
+										media="(max-width: 520px)"
 										srcset="./src/images/banners/banner_2-400.webp"
 										type="image/webp"
 									/>
 									<source
-										media="(max-width: 519px)"
+										media="(max-width: 520px)"
 										srcset="./src/images/banners/banner_2-400.png"
 										type="image/png"
 									/>
 
 									<source
-										media="(min-width: 520px) and (max-width: 992px)"
+										media="(min-width: 520px) and (max-width: 991px)"
 										srcset="./src/images/banners/banner_2-750.webp"
 										type="image/webp"
 									/>
 									<source
-										media="(min-width: 520px) and (max-width: 992px)"
+										media="(min-width: 520px) and (max-width: 991px)"
 										srcset="./src/images/banners/banner_2-750.png"
 										type="image/png"
 									/>
@@ -316,7 +310,7 @@
 										loading="eager"
 										fetchpriority="high"
 										decoding="async"
-										class="hero__banner banner banner_center"
+										class="hero__banner banner banner_alt banner_center"
 									/>
 								</picture>
 							</section>
@@ -1800,7 +1794,7 @@
 							<p class="about__paragraph">
 								Створені на основі преміальних ароматизаторів та виготовлені
 								на потужностях лідера індустрії
-								<span class="-upper">FlavourLab</span>,
+								<span class="-upper">FlavorLab</span>,
 								набори
 								<span class="-upper">Mood Duck</span>
 								пропонують вам 21 неперевершений смак, який ми вибрали,
@@ -1883,7 +1877,7 @@
 							<section class="brand-info__item" id="brand-info-item-3">
 								<section class="brand-info__item-title-wrap">
 									<h3 class="brand-info__item-title">
-										Зроблені на найкращих виробничих потужностях <span class="-upper">FlavourLab</span>
+										Зроблені на найкращих виробничих потужностях <span class="-upper">FlavorLab</span>
 									</h3>
 								</section>
 								<section class="brand-info__item-description">
@@ -2424,7 +2418,7 @@
 							<section class="form-review__row">
 								<div class="form-review__column">
 									<label class="form-review__label" for="pluses">Плюси</label>
-									<input type="text" name="pluses" id="pluses" class="form-review__input">
+									<input type="text" name="pluses" id="pluses" class="form-review__input" placeholder="Крутий дизайн">
 								</div>
 								<div class="form-review__column">
 									<label class="form-review__label" for="minuses">Мінуси</label>
@@ -2662,9 +2656,9 @@
                 } else {
                     swiper.loopDestroy();
                     swiper.loopCreate();
-                    swiper.slideToLoop(0, 0);
                 }
                 swiper.update();
+                swiper.slideToLoop(0);
             }
         },
         menu: {

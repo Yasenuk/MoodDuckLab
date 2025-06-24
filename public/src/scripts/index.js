@@ -89,7 +89,11 @@ form.addEventListener('submit', async (e) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
-    });
+		});
+		
+		if (res.status === 429) {
+			return alert('Ти вже залишив відгук, спробуй пізніше!');
+		}
 
     const json = await res.json();
 
