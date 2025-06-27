@@ -92,10 +92,9 @@ export class ReviewRenderer {
 
   addReview(review) {
     this.renderReview(review);
-    this.swiper.loopedSlides = this.container.children.length;
     this.swiper.loopDestroy();
     this.swiper.loopCreate();
     this.swiper.update();
-    this.swiper.slideTo(this.container.children.length - 1);
+    this.swiper.slideTo(0, 0);
   }
 }

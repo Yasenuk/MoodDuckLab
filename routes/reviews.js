@@ -34,7 +34,7 @@ router.post('/send-review', reviewLimiter, async (req, res) => {
 router.get('/reviews', async (req, res) => {
   try {
     const result = await pool.query(
-      `SELECT id, username, rating, avatar_id, review_text, pros, cons, phone, published_at
+      `SELECT id, username, rating, avatar_id, review_text, pros, cons, published_at
        FROM reviews
        ORDER BY published_at DESC`
     );
