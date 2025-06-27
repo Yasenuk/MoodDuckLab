@@ -1016,6 +1016,8 @@ body._locked {
 }
 
 .main-title {
+  font-size: 2rem;
+  font-family: "Bebas Neue Cyrillic";
   position: absolute;
   width: 1px;
   height: 1px;

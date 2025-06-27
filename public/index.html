@@ -1993,8 +1993,8 @@
 									<span class="flavours-info__item-list_flavour">(лимон з м’ятою)</span>
 								</li>
 								<li class="flavours-info__item-list">
-									Orbit Splash
-									<span class="flavours-info__item-list_flavour">(м’ятний орбіт)</span>
+									Mint Gum
+									<span class="flavours-info__item-list_flavour">(м’ятна жуйка)</span>
 								</li>
 								<li class="flavours-info__item-list">
 									Granato Rosso
@@ -2026,24 +2026,24 @@
 									<span class="flavours-info__item-list_flavour">(чорниця з льодом)</span>
 								</li>
 								<li class="flavours-info__item-list">
-									Cherry Cola
-									<span class="flavours-info__item-list_flavour">(вишнева кола)</span>
-								</li>
-								<li class="flavours-info__item-list">
 									Chill Peach
 									<span class="flavours-info__item-list_flavour">(крижаний персик)</span>
-								</li>
-								<li class="flavours-info__item-list">
-									Citrus Paradise
-									<span class="flavours-info__item-list_flavour">(грейпфрут, лимон, апельсин)</span>
 								</li>
 								<li class="flavours-info__item-list">
 									Dragonfruit Ice
 									<span class="flavours-info__item-list_flavour">(пітахая з льодом)</span>
 								</li>
 								<li class="flavours-info__item-list">
-									Forest Berries
-									<span class="flavours-info__item-list_flavour">(лісові ягоди)</span>
+									Pineapple Frost
+									<span class="flavours-info__item-list_flavour">(крижаний ананас)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Sour Apple Ice
+									<span class="flavours-info__item-list_flavour">(кисле яблуко з льодом)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Watermelon Ice
+									<span class="flavours-info__item-list_flavour">(кавун з льодом)</span>
 								</li>
 							</ul>
 
@@ -2068,24 +2068,24 @@
 
 							<ul class="flavours-info__list">
 								<li class="flavours-info__item-list">
-									Pineapple Frost
-									<span class="flavours-info__item-list_flavour">(крижаний ананас)</span>
+									Cherry Cola
+									<span class="flavours-info__item-list_flavour">(вишнева кола)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Citrus Paradise
+									<span class="flavours-info__item-list_flavour">(грейпфрут, лимон, апельсин)</span>
+								</li>
+								<li class="flavours-info__item-list">
+									Forest Berries
+									<span class="flavours-info__item-list_flavour">(лісові ягоди)</span>
 								</li>
 								<li class="flavours-info__item-list">
 									Raspberry Lemonade
 									<span class="flavours-info__item-list_flavour">(малиновий лимонад)</span>
 								</li>
 								<li class="flavours-info__item-list">
-									Sour Apple Ice
-									<span class="flavours-info__item-list_flavour">(кисле яблуко з льодом)</span>
-								</li>
-								<li class="flavours-info__item-list">
-									Strawberry RedBull
+									Strawberry Energy
 									<span class="flavours-info__item-list_flavour">(полуничний енергетик)</span>
-								</li>
-								<li class="flavours-info__item-list">
-									Watermelon Ice
-									<span class="flavours-info__item-list_flavour">(кавун з льодом)</span>
 								</li>
 								<li class="flavours-info__item-list">
 									Tobacco
@@ -2500,7 +2500,7 @@
 										/>
 										<source
 											media="(max-width: 519px)"
-											srcset="./src/images/menu/flavours_menu_3-400.png"
+											srcset="./src/images/menu/flavours_menu_2-400.png"
 											type="image/png"
 										/>
 
@@ -2643,12 +2643,10 @@
             },
             customInit: async (swiper) => {
                 const container = document.querySelector('.swiper-review .swiper-wrapper');
-                await new ReviewRenderer('.reviews__wrapper', '/reviews', swiper);
+                await new ReviewRenderer('.swiper-review .swiper-wrapper', '/reviews', swiper);
                 
                 const slides = container.querySelectorAll('.swiper-slide');
                 if (!slides.length) return;
-
-                slides[0]?.classList.add("swiper-slide-active");
                 
                 if (slides.length < 3) {
                     swiper.params.loop = false;
@@ -2657,8 +2655,10 @@
                     swiper.loopDestroy();
                     swiper.loopCreate();
                 }
+
+								swiper.params.loopedSlides = slides.length;
                 swiper.update();
-                swiper.slideToLoop(0);
+                swiper.slideToLoop(0, 0);
             }
         },
         menu: {

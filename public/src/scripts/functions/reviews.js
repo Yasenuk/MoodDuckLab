@@ -15,9 +15,6 @@ export class ReviewRenderer {
 
       reviews.forEach(r => this.renderReview(r));
 
-      this.swiper.loopedSlides = this.container.children.length;
-      this.swiper.loopDestroy();
-      this.swiper.loopCreate();
       this.swiper.update();
     } catch (err) {
       console.error('Помилка при завантаженні відгуків:', err);
